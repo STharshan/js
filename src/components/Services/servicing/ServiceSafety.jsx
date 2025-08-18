@@ -1,49 +1,54 @@
 import React from 'react';
 
 const ServiceSafety = () => {
-  return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-semibold text-center mb-8">
-        Brake Safety Warning Signs
-      </h1>
-      <p className="text-lg text-center mb-8">
-        Don't ignore these warning signs. Your brakes are your vehicle's most important safety system.
+    return (
+    <div className="container mx-auto px-4 py-16">
+      <h2 className="text-4xl font-semibold text-center mb-8">
+        Service Intervals
+      </h2>
+      <p className="text-center text-lg mb-8">
+        Regular servicing keeps your vehicle running efficiently and helps prevent costly breakdowns.
       </p>
-
-      <div className="bg-red-100 p-4 rounded-md mb-8">
-        <h2 className="text-xl font-semibold text-red-600 mb-4">When to Get Your Brakes Checked</h2>
-        <ul className="list-disc list-inside text-lg text-red-600">
-          <li>Squealing or grinding noises</li>
-          <li>Brake pedal feels spongy or soft</li>
-          <li>Vehicle pulls to one side when braking</li>
-          <li>Brake warning light is on</li>
-          <li>Vibration when braking</li>
-          <li>Longer stopping distances</li>
-          <li>Brake pedal goes to the floor</li>
-          <li>Burning smell after driving</li>
-        </ul>
-      </div>
-
-      <div className="grid md:grid-cols-2 gap-8">
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h3 className="text-xl font-semibold text-teal-600 mb-4">Brake Pad Replacement</h3>
-          <p className="text-lg mb-4">From £80</p>
-          <ul className="list-disc list-inside text-lg">
-            <li>Quality brake pads fitted</li>
-            <li>Brake disc inspection</li>
-            <li>Brake fluid level check</li>
-            <li>Road test included</li>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Basic Service */}
+        <div className="service-card bg-white p-6 rounded-lg shadow-lg">
+          <h3 className="text-2xl font-semibold text-teal-600">Basic Service</h3>
+          <p className="text-xl text-teal-500">£120</p>
+          <ul className="mt-4 space-y-2">
+            <li>• Oil and filter change</li>
+            <li>• Fluid level checks</li>
+            <li>• Battery test</li>
+            <li>• Tyre pressure check</li>
+            <li>• Basic safety inspection</li>
           </ul>
         </div>
 
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h3 className="text-xl font-semibold text-teal-600 mb-4">Full Brake Service</h3>
-          <p className="text-lg mb-4">From £150</p>
-          <ul className="list-disc list-inside text-lg">
-            <li>Brake pads and discs</li>
-            <li>Brake fluid replacement</li>
-            <li>Brake system inspection</li>
-            <li>Handbrake adjustment</li>
+        {/* Full Service */}
+        <div className="service-card bg-teal-100 p-6 rounded-lg shadow-lg">
+          <h3 className="text-2xl font-semibold text-teal-600">Full Service</h3>
+          <p className="text-xl text-teal-500">£180</p>
+          <p className="text-md text-teal-500 font-medium mt-2">Most Popular</p>
+          <ul className="mt-4 space-y-2">
+            <li>• Everything in Basic Service</li>
+            <li>• Comprehensive inspection</li>
+            <li>• Brake system check</li>
+            <li>• Suspension inspection</li>
+            <li>• Exhaust system check</li>
+            <li>• Detailed report</li>
+          </ul>
+        </div>
+
+        {/* Major Service */}
+        <div className="service-card bg-white p-6 rounded-lg shadow-lg">
+          <h3 className="text-2xl font-semibold text-teal-600">Major Service</h3>
+          <p className="text-xl text-teal-500">£250</p>
+          <ul className="mt-4 space-y-2">
+            <li>• Everything in Full Service</li>
+            <li>• Timing belt inspection</li>
+            <li>• Coolant system service</li>
+            <li>• Air filter replacement</li>
+            <li>• Spark plug check/replace</li>
+            <li>• Comprehensive diagnostics</li>
           </ul>
         </div>
       </div>

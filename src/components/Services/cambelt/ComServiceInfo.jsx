@@ -23,7 +23,7 @@ const ComServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Comprehensive brake system inspection</span>
+              <span>Complete timing belt kit replacement</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -40,7 +40,7 @@ const ComServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Quality brake pads or discs fitted</span>
+              <span>Tensioner and idler pulley replacement</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -57,7 +57,7 @@ const ComServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Brake fluid level check and top-up</span>
+              <span>Water pump replacement (if belt-driven)</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -74,7 +74,24 @@ const ComServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Brake performance road test</span>
+              <span>Precision engine timing setup</span>
+            </li>
+            <li className="flex items-center space-x-2 mb-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-teal-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              <span>Auxiliary belt inspection and replacement</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -92,23 +109,6 @@ const ComServiceInfo = () => {
                 />
               </svg>
               <span>12-month warranty on parts and labor</span>
-            </li>
-            <li className="flex items-center space-x-2 mb-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-teal-500"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-              <span>Safety certificate upon completion</span>
             </li>
           </ul>
         </div>
@@ -132,7 +132,7 @@ const ComServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Premium quality brake components</span>
+              <span>OEM quality timing belt kits</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -149,7 +149,7 @@ const ComServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Expert brake technicians</span>
+              <span>Experienced engine technicians</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -166,24 +166,7 @@ const ComServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Same-day service available</span>
-            </li>
-            <li className="flex items-center space-x-2 mb-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-orange-500"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-              <span>Competitive pricing</span>
+              <span>Precision timing equipment</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -217,7 +200,24 @@ const ComServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Emergency brake repairs</span>
+              <span>Competitive pricing</span>
+            </li>
+            <li className="flex items-center space-x-2 mb-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-orange-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+              <span>Same-day service available</span>
             </li>
           </ul>
         </div>

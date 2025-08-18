@@ -2,53 +2,82 @@ import React from 'react';
 
 const MotSafety = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-semibold text-center mb-8">
-        Brake Safety Warning Signs
-      </h1>
-      <p className="text-lg text-center mb-8">
-        Don't ignore these warning signs. Your brakes are your vehicle's most important safety system.
-      </p>
+    <div className=" min-h-screen flex flex-col items-center py-8 px-4">
+      <div className=" w-full max-w-4xl rounded-lg p-8">
+        {/* Title */}
+        <h1 className="text-3xl font-semibold text-center mb-6">
+          MOT Test Information
+        </h1>
+        <p className="text-lg text-center mb-8">
+          Your MOT certificate is legally required for vehicles over 3 years
+          old. We provide comprehensive testing with detailed reports.
+        </p>
 
-      <div className="bg-red-100 p-4 rounded-md mb-8">
-        <h2 className="text-xl font-semibold text-red-600 mb-4">When to Get Your Brakes Checked</h2>
-        <ul className="list-disc list-inside text-lg text-red-600">
-          <li>Squealing or grinding noises</li>
-          <li>Brake pedal feels spongy or soft</li>
-          <li>Vehicle pulls to one side when braking</li>
-          <li>Brake warning light is on</li>
-          <li>Vibration when braking</li>
-          <li>Longer stopping distances</li>
-          <li>Brake pedal goes to the floor</li>
-          <li>Burning smell after driving</li>
-        </ul>
-      </div>
+        {/* Test Result Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
+          <div className="flex flex-col items-center bg-green-100 p-6 rounded-lg shadow-lg">
+            <div className="bg-green-500 text-white p-4 rounded-full mb-4">
+              <i className="fas fa-check text-4xl"></i>
+            </div>
+            <h3 className="text-xl font-semibold text-center">Pass</h3>
+            <p className="text-center text-sm text-gray-600">
+              Your vehicle meets all safety and environmental standards.
+              Certificate issued immediately.
+            </p>
+          </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h3 className="text-xl font-semibold text-teal-600 mb-4">Brake Pad Replacement</h3>
-          <p className="text-lg mb-4">From £80</p>
-          <ul className="list-disc list-inside text-lg">
-            <li>Quality brake pads fitted</li>
-            <li>Brake disc inspection</li>
-            <li>Brake fluid level check</li>
-            <li>Road test included</li>
-          </ul>
+          <div className="flex flex-col items-center bg-yellow-100 p-6 rounded-lg shadow-lg">
+            <div className="bg-yellow-500 text-white p-4 rounded-full mb-4">
+              <i className="fas fa-exclamation-circle text-4xl"></i>
+            </div>
+            <h3 className="text-xl font-semibold text-center">Advisory</h3>
+            <p className="text-center text-sm text-gray-600">
+              Minor issues noted that should be monitored. Certificate still
+              issued with advisory notes.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center bg-red-100 p-6 rounded-lg shadow-lg">
+            <div className="bg-red-500 text-white p-4 rounded-full mb-4">
+              <i className="fas fa-times-circle text-4xl"></i>
+            </div>
+            <h3 className="text-xl font-semibold text-center">Fail</h3>
+            <p className="text-center text-sm text-gray-600">
+              Safety issues found that must be fixed. We can repair and retest
+              the same day in most cases.
+            </p>
+          </div>
         </div>
 
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h3 className="text-xl font-semibold text-teal-600 mb-4">Full Brake Service</h3>
-          <p className="text-lg mb-4">From £150</p>
-          <ul className="list-disc list-inside text-lg">
-            <li>Brake pads and discs</li>
-            <li>Brake fluid replacement</li>
-            <li>Brake system inspection</li>
-            <li>Handbrake adjustment</li>
-          </ul>
+        {/* Test Categories */}
+        <div>
+          <h3 className="text-xl font-semibold mb-4">What We Test</h3>
+
+          {/* Safety Systems & Vehicle Condition */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <h4 className="font-semibold text-lg mb-2">Safety Systems</h4>
+              <ul className="list-disc pl-5 text-sm text-gray-600">
+                <li>Brakes and handbrake</li>
+                <li>Steering and suspension</li>
+                <li>Tyres and wheels</li>
+                <li>Seat belts</li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="font-semibold text-lg mb-2">Vehicle Condition</h4>
+              <ul className="list-disc pl-5 text-sm text-gray-600">
+                <li>Lights and electrical systems</li>
+                <li>Mirrors and windscreen</li>
+                <li>Exhaust and emissions</li>
+                <li>Body and structure</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default MotSafety;

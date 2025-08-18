@@ -11,10 +11,10 @@ const BrakeHeader = () => {
                     {/* Left side content */}
                     <div className="space-y-8">
                         <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                            MOT Testing
+                           Brake Services
                         </h1>
                         <p className="text-xl text-gray-600 leading-relaxed">
-                            Comprehensive MOT testing with detailed reports and expert advice. We test all aspects of your vehicle's safety, roadworthiness, and environmental impact.
+                            Professional brake services including pad replacement, disc machining, and complete brake system overhauls. Your safety is our priority - don't compromise on brakes.
                         </p>
                         {/* Details */}
 
@@ -42,7 +42,7 @@ const BrakeHeader = () => {
                             <button className="bg-teal-500 text-white px-6 py-2 rounded-md hover:bg-teal-600 transition duration-300 flex items-center space-x-2">
                                 {/* Phone Icon */}
                                 <FaPhoneAlt className="w-4 h-4" />
-                                <span>Book Service Now</span>
+                                <span>Book Now-01709 863222</span>
                             </button>
                             <button className="bg-teal-500 text-white px-6 py-2 rounded-md hover:bg-teal-600 transition duration-300">
                                 Get Free Quote

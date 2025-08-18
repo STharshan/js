@@ -11,10 +11,10 @@ const DiagnosticsHeader = () => {
                     {/* Left side content */}
                     <div className="space-y-8">
                         <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                            MOT Testing
+                            Vehicle Diagnostics
                         </h1>
                         <p className="text-xl text-gray-600 leading-relaxed">
-                            Comprehensive MOT testing with detailed reports and expert advice. We test all aspects of your vehicle's safety, roadworthiness, and environmental impact.
+                            State-of-the-art diagnostic services to identify and resolve complex vehicle issues. Our advanced equipment and expert technicians get to the root of the problem quickly.
                         </p>
                         {/* Details */}
 
@@ -23,7 +23,7 @@ const DiagnosticsHeader = () => {
                         <div className="flex items-center space-x-2">
                             {/* Right side Content with Top and Bottom */}
                             <div className="flex flex-col text-gray-600">
-                                <p className="font-semibold">From £80</p>
+                                <p className="font-semibold">From £45</p>
                             </div>
                         </div>
                             {/* Clock icon for hours */}
@@ -33,7 +33,7 @@ const DiagnosticsHeader = () => {
 
                                 {/* Right side Content with Top and Bottom */}
                                 <div className="flex flex-col text-gray-600">
-                                    <p className="font-semibold">1-3 hours</p>  {/* Top Content */}
+                                    <p className="font-semibold">30-60 minutes</p>  {/* Top Content */}
                                 </div>
                             </div>
                         </div>
@@ -42,7 +42,7 @@ const DiagnosticsHeader = () => {
                             <button className="bg-teal-500 text-white px-6 py-2 rounded-md hover:bg-teal-600 transition duration-300 flex items-center space-x-2">
                                 {/* Phone Icon */}
                                 <FaPhoneAlt className="w-4 h-4" />
-                                <span>Book Service Now</span>
+                                <span>Book Now-01709 863222</span>
                             </button>
                             <button className="bg-teal-500 text-white px-6 py-2 rounded-md hover:bg-teal-600 transition duration-300">
                                 Get Free Quote

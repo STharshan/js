@@ -23,7 +23,7 @@ const DiagnosticsServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Comprehensive brake system inspection</span>
+              <span>Comprehensive computer diagnostic scan</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -40,7 +40,7 @@ const DiagnosticsServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Quality brake pads or discs fitted</span>
+              <span>Fault code reading and interpretation</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -57,7 +57,7 @@ const DiagnosticsServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Brake fluid level check and top-up</span>
+              <span>Visual inspection of related systems</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -74,7 +74,7 @@ const DiagnosticsServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Brake performance road test</span>
+              <span>Clear explanation of findings</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -91,7 +91,7 @@ const DiagnosticsServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>12-month warranty on parts and labor</span>
+              <span>Detailed written report</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -108,7 +108,7 @@ const DiagnosticsServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Safety certificate upon completion</span>
+              <span>Repair recommendations and quotes</span>
             </li>
           </ul>
         </div>
@@ -132,7 +132,7 @@ const DiagnosticsServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Premium quality brake components</span>
+              <span>Latest diagnostic equipment</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -149,7 +149,7 @@ const DiagnosticsServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Expert brake technicians</span>
+              <span>All makes and models covered</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -166,7 +166,7 @@ const DiagnosticsServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Same-day service available</span>
+              <span>Expert fault interpretation</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -183,7 +183,7 @@ const DiagnosticsServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Competitive pricing</span>
+              <span>No fix, no fee guarantee</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -200,7 +200,7 @@ const DiagnosticsServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>All makes and models</span>
+              <span>Same-day diagnosis available</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -217,7 +217,7 @@ const DiagnosticsServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Emergency brake repairs</span>
+              <span>Competitive diagnostic fees</span>
             </li>
           </ul>
         </div>

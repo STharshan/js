@@ -1,54 +1,110 @@
 import React from 'react';
+import { FiAlertTriangle } from 'react-icons/fi';
 
 const SupsensionSafety = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-semibold text-center mb-8">
-        Brake Safety Warning Signs
-      </h1>
-      <p className="text-lg text-center mb-8">
-        Don't ignore these warning signs. Your brakes are your vehicle's most important safety system.
-      </p>
-
-      <div className="bg-red-100 p-4 rounded-md mb-8">
-        <h2 className="text-xl font-semibold text-red-600 mb-4">When to Get Your Brakes Checked</h2>
-        <ul className="list-disc list-inside text-lg text-red-600">
-          <li>Squealing or grinding noises</li>
-          <li>Brake pedal feels spongy or soft</li>
-          <li>Vehicle pulls to one side when braking</li>
-          <li>Brake warning light is on</li>
-          <li>Vibration when braking</li>
-          <li>Longer stopping distances</li>
-          <li>Brake pedal goes to the floor</li>
-          <li>Burning smell after driving</li>
-        </ul>
+    <section className="px-4 md:px-12 py-12 max-w-7xl mx-auto">
+      {/* Title */}
+      <div className="text-center mb-10">
+        <h2 className="text-2xl md:text-3xl font-semibold">
+          Suspension System Services
+        </h2>
+        <p className="mt-2 text-gray-600 max-w-2xl mx-auto">
+          Your suspension system affects safety, comfort, and tire wear. We
+          provide comprehensive suspension services for all vehicles.
+        </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h3 className="text-xl font-semibold text-teal-600 mb-4">Brake Pad Replacement</h3>
-          <p className="text-lg mb-4">From £80</p>
-          <ul className="list-disc list-inside text-lg">
-            <li>Quality brake pads fitted</li>
-            <li>Brake disc inspection</li>
-            <li>Brake fluid level check</li>
+      {/* Signs of Problems */}
+      <div className="border border-red-300 bg-red-50 p-6 rounded-lg mb-10">
+        <div className="flex items-start gap-2">
+          <FiAlertTriangle className="text-red-600 w-6 h-6 mt-1" />
+          <div>
+            <h3 className="text-red-700 font-semibold">
+              Signs of Suspension Problems
+            </h3>
+            <div className="grid md:grid-cols-2 gap-6 mt-3 text-gray-700 text-sm">
+              <ul className="list-disc list-inside space-y-1">
+                <li>Vehicle bounces excessively over bumps</li>
+                <li>Uneven tire wear patterns</li>
+                <li>Vehicle pulls to one side</li>
+                <li>Nose dives when braking</li>
+              </ul>
+              <ul className="list-disc list-inside space-y-1">
+                <li>Excessive body roll in corners</li>
+                <li>Clunking or knocking noises</li>
+                <li>Steering feels loose or vague</li>
+                <li>Vehicle sits lower on one side</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Service Options */}
+      <div className="grid md:grid-cols-2 gap-6 mb-10">
+        <div className="border p-6 rounded-lg">
+          <h4 className="font-semibold text-gray-800 mb-2">
+            Shock Absorber Service
+          </h4>
+          <p className="text-green-700 font-bold">From £120</p>
+          <ul className="list-disc list-inside text-gray-700 space-y-1 text-sm mt-2">
+            <li>Front or rear shock replacement</li>
+            <li>Quality shock absorbers fitted</li>
+            <li>Suspension mounting inspection</li>
             <li>Road test included</li>
           </ul>
         </div>
-
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h3 className="text-xl font-semibold text-teal-600 mb-4">Full Brake Service</h3>
-          <p className="text-lg mb-4">From £150</p>
-          <ul className="list-disc list-inside text-lg">
-            <li>Brake pads and discs</li>
-            <li>Brake fluid replacement</li>
-            <li>Brake system inspection</li>
-            <li>Handbrake adjustment</li>
+        <div className="border p-6 rounded-lg">
+          <h4 className="font-semibold text-gray-800 mb-2">
+            Complete Suspension Overhaul
+          </h4>
+          <p className="text-green-700 font-bold">From £350</p>
+          <ul className="list-disc list-inside text-gray-700 space-y-1 text-sm mt-2">
+            <li>All shock absorbers replaced</li>
+            <li>Springs and mounting hardware</li>
+            <li>Suspension geometry check</li>
+            <li>Wheel alignment included</li>
           </ul>
         </div>
       </div>
-    </div>
+
+      {/* Components We Service */}
+      <div className="border p-6 rounded-lg grid md:grid-cols-3 gap-6 text-sm">
+        <div>
+          <h4 className="font-semibold text-gray-800 mb-2">Front Suspension</h4>
+          <ul className="list-disc list-inside text-gray-700 space-y-1">
+            <li>MacPherson struts</li>
+            <li>Coil springs</li>
+            <li>Anti-roll bars</li>
+            <li>Ball joints</li>
+            <li>Control arms</li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="font-semibold text-gray-800 mb-2">Rear Suspension</h4>
+          <ul className="list-disc list-inside text-gray-700 space-y-1">
+            <li>Shock absorbers</li>
+            <li>Leaf springs</li>
+            <li>Coil springs</li>
+            <li>Trailing arms</li>
+            <li>Panhard rods</li>
+          </ul>
+        </div>
+        <div>
+          <h4 className="font-semibold text-gray-800 mb-2">Additional Services</h4>
+          <ul className="list-disc list-inside text-gray-700 space-y-1">
+            <li>Wheel alignment</li>
+            <li>Suspension geometry</li>
+            <li>Ride height adjustment</li>
+            <li>Performance upgrades</li>
+            <li>Load leveling systems</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   );
 };
+
 
 export default SupsensionSafety;

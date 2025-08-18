@@ -23,7 +23,7 @@ const SupsensionServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Comprehensive brake system inspection</span>
+              <span>Comprehensive suspension inspection</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -40,7 +40,7 @@ const SupsensionServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Quality brake pads or discs fitted</span>
+              <span>Quality replacement components</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -57,7 +57,7 @@ const SupsensionServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Brake fluid level check and top-up</span>
+              <span>Suspension geometry check</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -74,7 +74,7 @@ const SupsensionServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Brake performance road test</span>
+              <span>Road test and handling assessment</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -108,7 +108,7 @@ const SupsensionServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Safety certificate upon completion</span>
+              <span>Wheel alignment check included</span>
             </li>
           </ul>
         </div>
@@ -132,7 +132,7 @@ const SupsensionServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Premium quality brake components</span>
+              <span>All suspension types serviced</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -149,7 +149,7 @@ const SupsensionServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Expert brake technicians</span>
+              <span>Quality branded components</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -166,7 +166,7 @@ const SupsensionServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Same-day service available</span>
+              <span>Expert suspension technicians</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -200,7 +200,7 @@ const SupsensionServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>All makes and models</span>
+              <span>Same-day service available</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -217,7 +217,7 @@ const SupsensionServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Emergency brake repairs</span>
+              <span>Performance upgrade options</span>
             </li>
           </ul>
         </div>

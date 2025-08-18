@@ -23,7 +23,7 @@ const DPFServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Comprehensive brake system inspection</span>
+              <span>Comprehensive DPF system diagnosis</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -40,7 +40,7 @@ const DPFServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Quality brake pads or discs fitted</span>
+              <span>Professional cleaning or regeneration</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -57,7 +57,7 @@ const DPFServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Brake fluid level check and top-up</span>
+              <span>Fault code clearing</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -74,7 +74,7 @@ const DPFServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Brake performance road test</span>
+              <span>System performance testing</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -91,7 +91,7 @@ const DPFServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>12-month warranty on parts and labor</span>
+              <span>Road test verification</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -108,7 +108,7 @@ const DPFServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Safety certificate upon completion</span>
+              <span>Preventive maintenance advice</span>
             </li>
           </ul>
         </div>
@@ -132,7 +132,7 @@ const DPFServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Premium quality brake components</span>
+              <span>Specialist DPF equipment</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -149,7 +149,7 @@ const DPFServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>Expert brake technicians</span>
+              <span>All diesel vehicles covered</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
               <svg
@@ -183,6 +183,23 @@ const DPFServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
+              <span>Guaranteed results</span>
+            </li>
+            <li className="flex items-center space-x-2 mb-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-orange-500"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
               <span>Competitive pricing</span>
             </li>
             <li className="flex items-center space-x-2 mb-3">
@@ -200,24 +217,7 @@ const DPFServiceInfo = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <span>All makes and models</span>
-            </li>
-            <li className="flex items-center space-x-2 mb-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6 text-orange-500"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-              <span>Emergency brake repairs</span>
+              <span>Expert diesel technicians</span>
             </li>
           </ul>
         </div>
