@@ -44,17 +44,17 @@ const Testimonials = () => {
     return (
         <section className="py-16 px-4 bg-gray-50">
             <div className="max-w-7xl mx-auto text-center">
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-8">
                     What Our Customers Say
                 </h2>
-                <p className="text-lg text-gray-600 mb-12">
+                <p className="text-xl max-w-4xl mx-auto font-semibold text-gray-800 mb-12">
                     Don't just take our word for it. Here's what our satisfied customers have to say about our automotive services.
                 </p>
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-3 gap-8 max-w-310 mx-auto">
                     {testimonials.map((testimonial, index) => (
-                        <div key={index} className="bg-white p-6 rounded-xl shadow-md">
+                        <div key={index} className="bg-white p-6 rounded-xl border border-gray-300 shadow-md">
                             <div className="flex justify-between items-start mb-4">
-                                <div className="text-yellow-500">
+                                <div className="text-orange-500">
                                     {Array.from({ length: testimonial.rating }).map((_, idx) => (
                                         <span key={idx} className="text-xl">★</span>
                                     ))}
@@ -64,7 +64,7 @@ const Testimonials = () => {
                                 </div>
                             </div>
                             <p className="text-lg text-gray-700 mb-4 text-left">
-                                {testimonial.feedback}
+                                "{testimonial.feedback}"
                             </p>
                             <hr className='mb-4 text-gray-300' />
                             <p className=" text-left font-semibold text-gray-900">{testimonial.name}</p>
@@ -72,15 +72,15 @@ const Testimonials = () => {
                         </div>
                     ))}
                 </div>
-                <div className="flex items-center gap-2 bg-orange-200 border-gray-600 px-6 py-2 rounded-full max-w-xs mx-auto mt-8">
+                <div className="flex items-center gap-4 bg-orange-100 border-gray-600 px-6 py-2 rounded-full max-w-90 mx-auto mt-8">
                     {/* Stars */}
-                    <div className="flex text-yellow-400 text-xs space-x-1">
+                    <div className="flex text-orange-500 text-2xl space-x-1">
                         <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                     </div>
                     {/* Score */}
-                    <span className="text-sm">4.9/5 from</span>
+                    <span className="text-sm mt-1">4.9/5 </span>
                     {/* Reviews */}
-                    <span className=" text-xs">500+ Reviews</span>
+                    <span className=" text-sm mt-1 text-gray-700">from 500+ reviews</span>
                 </div>
             </div>
         </section>

@@ -11,14 +11,14 @@ const HeroSection = () => {
                     {/* Left side content */}
                     <div className="space-y-8">
                         <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-                            Professional <span className="text-teal-500">Automotive Services</span>
+                            Professional <span className="text-teal-600">Automotive Services</span>
                         </h1>
                         <p className="text-xl text-gray-600 leading-relaxed">
                             Expert car repairs, MOT testing, and maintenance services you can trust. Over 15 years of experience keeping Sheffield's vehicles running smoothly.
                         </p>
                         {/* Rating and Customer count */}
                         <div className="flex items-center space-x-2">
-                            <span className="text-yellow-400 text-2xl">★★★★★</span>
+                            <span className="text-orange-500 text-2xl">★★★★★</span>
                             <p className="text-gray-600">4.9/5 Rating</p>
                             <p className="text-gray-600 px-3">500+ Happy Customers</p>
                         </div>
