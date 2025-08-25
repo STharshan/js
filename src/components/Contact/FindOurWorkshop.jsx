@@ -21,10 +21,19 @@ const FindOurWorkshop = () => {
         {/* Right Section: Map */}
         <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
           <h3 className="text-xl font-semibold mb-4">Sheffield Workshop</h3>
-          <p className="mb-4">Call for exact directions</p>
-          <div className="w-full h-64 bg-blue-300 rounded-lg flex items-center justify-center text-white">
-            {/* Replace the below with actual map or an image */}
-            <span className="text-xl">Map Placeholder</span>
+
+          {/* Google Map Embed */}
+          <div className="w-full h-64 rounded-lg overflow-hidden">
+            <iframe
+              title="JS Automotive Edlington - New Edlington, Doncaster DN12 1DJ, UK"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9369.37213781464!2d-1.1911469!3d53.4833911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487978dcad11ef39%3A0x2f79b44efce9790c!2sJS%20Automotive!5e0!3m2!1sen!2suk!4v1724582956789!5m2!1sen!2suk"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>

@@ -118,15 +118,15 @@ const QuoteForm = () => {
                 rows="4"
               ></textarea>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-center mb-3">
               <button
                 type="submit"
-                className="bg-blue-500 text-white px-6 py-3 rounded-lg"
+                className="bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-700"
               >
                 Send My Free Quote Request
               </button>
-              <p className="text-sm text-gray-500">We’ll respond within 24 hours with a detailed quote.</p>
             </div>
+              <p className="text-sm text-center text-gray-500">We’ll respond within 24 hours with a detailed quote.</p>
           </form>
         </div>
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { FaClock, FaMapMarkerAlt, FaPhoneAlt } from 'react-icons/fa';
 import { FiClock } from 'react-icons/fi';
 import { IoLocationOutline } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
 
 const ServiceHeader = () => {
     return (
@@ -39,11 +40,13 @@ const ServiceHeader = () => {
                         </div>
                         {/* Buttons */}
                         <div className="flex space-x-6">
-                            <button className="bg-teal-500 text-white px-6 py-2 rounded-md hover:bg-teal-600 transition duration-300 flex items-center space-x-2">
-                                {/* Phone Icon */}
+                            <Link
+                                to="/contact"
+                                className="bg-teal-500 text-white px-6 py-2 rounded-md hover:bg-teal-600 transition duration-300 flex items-center space-x-2"
+                            >
                                 <FaPhoneAlt className="w-4 h-4" />
                                 <span>Book Now-01709 863222</span>
-                            </button>
+                            </Link>
                             <button className="bg-teal-500 text-white px-6 py-2 rounded-md hover:bg-teal-600 transition duration-300">
                                 Get Free Quote
                             </button>

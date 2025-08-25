@@ -4,7 +4,7 @@ const ContactHeader = () => {
   return (
     <div className="bg-white py-16 px-4">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-4xl font-semibold mb-6">Contact JS Automotive</h2>
+        <h2 className="text-4xl font-semibold mb-6 mt-10">Contact JS Automotive</h2>
         <p className="text-lg mb-12">
           Ready to book a service or have questions about your vehicle? We're here to help with expert advice and professional automotive services.
         </p>

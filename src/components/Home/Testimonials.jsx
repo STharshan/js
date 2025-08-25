@@ -3,39 +3,41 @@ import { FaQuoteLeft, FaQuoteRight } from 'react-icons/fa'; // Importing the quo
 
 const testimonials = [
     {
-        name: 'Sarah Johnson',
-        service: 'Engine Diagnostics',
-        feedback: 'Excellent service! They diagnosed my car issue quickly and fixed it at a fair price. Very professional and trustworthy.',
+        name: 'Barry Harvey',
+        service: 'Full Servicing',
+        feedback: 'Best in area. Joe and team all do there best by you. Highly recommend prices and service 2nd to none',
         rating: 5,
     },
     {
-        name: 'Mike Thompson',
+        name: 'David Reeve',
         service: 'Regular Servicing',
-        feedback: 'Been using JS Automotive for 3 years now. Always honest about what needs doing and what can wait. Highly recommend!',
+        feedback: 'Just had timing belt and water pump done on my C Max. Great customer service and at a very competitive price. Thank you so much folks. 🤩👍🏻',
         rating: 5,
     },
     {
-        name: 'Emma Davis',
+        name: 'Patricia Cross',
         service: 'MOT Testing',
-        feedback: 'MOT test was thorough and they explained everything clearly. No pressure to do unnecessary work. Will definitely return.',
+        feedback: 'Very polite gent.he arrived at my house within 20 mins of me phoning him to fix my Toyota yaris.i will definitely be using him again and I highly recommend him.',
         rating: 5,
     },
     {
-        name: 'James Wilson',
+        name: 'David Pryse',
         service: 'Brake Service',
-        feedback: 'Great work on my brake replacement. Competitive pricing and completed on time as promised. Very satisfied.',
+        feedback: `Was a pleasure to meet this young man, He managed to fit us in to his busy schedule
+                   Delighted with his workmanship, above and beyond with helpfulness
+                   And a very reasonable costing, would definitely recommend 👍`,
         rating: 5,
     },
     {
-        name: 'Lisa Brown',
+        name: 'katelynne jane williams',
         service: 'Suspension Repair',
-        feedback: 'Professional service from start to finish. They kept me updated throughout and the work was completed to a high standard.',
+        feedback: 'Joe looked at what was wrong with my car (lock on my boot). He sourced my part and then fitted it. He wouldn’t accept payment until he knew the completed works were to my satisfaction. Thank you Joe.',
         rating: 5,
     },
     {
-        name: 'David Miller',
+        name: 'Adam Lally',
         service: 'General Repairs',
-        feedback: 'Honest mechanics who won\'t try to sell you services you don’t need. Fair prices and quality work every time.',
+        feedback: 'Absolutely fantastic service would definitely recommend, great value and professional service , will be using Joe again 100%',
         rating: 5,
     },
 ];
@@ -68,7 +70,7 @@ const Testimonials = () => {
                             </p>
                             <hr className='mb-4 text-gray-300' />
                             <p className=" text-left font-semibold text-gray-900">{testimonial.name}</p>
-                            <p className="text-left text-sm text-gray-500">{testimonial.service}</p>
+                            {/* <p className="text-left text-sm text-gray-500">{testimonial.service}</p> */}
                         </div>
                     ))}
                 </div>
