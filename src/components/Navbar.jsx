@@ -86,10 +86,16 @@ const Navbar = () => {
         {/* Phone and Get Quote Button */}
         <div className="hidden md:flex items-center space-x-2">
           <FaPhoneAlt className="w-4 h-4 text-gray-700" />
-          <span className="text-gray-700 hover:text-teal-500 cursor-pointer">01709 863222</span>
-          <button className="bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-500">
-            Get Quote
-          </button>
+          <a href="tel:+441709863222">
+            <span className="text-gray-700 hover:text-teal-500 cursor-pointer">
+              01709 863222
+            </span>
+          </a>
+          <Link to="/contact">
+            <button className="bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-500">
+              Get Quote
+            </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Icon */}
@@ -136,11 +142,15 @@ const Navbar = () => {
           <Link to="/contact" className="text-gray-700 hover:text-teal-500">Contact</Link>
           <div className="flex items-center space-x-2">
             <FaPhoneAlt className="w-4 h-4 text-gray-700" />
-            <span className="text-gray-700 hover:text-teal-500 cursor-pointer">01709 863222</span>
+            <a href="tel:+441709863222" className="text-gray-700 hover:text-teal-500 cursor-pointer">
+              01709 863222
+            </a>
           </div>
-          <button className="bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-500">
-            Get Quote
-          </button>
+          <Link to="/contact">
+            <button className="bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-500">
+              Get Quote
+            </button>
+          </Link>
         </div>
       )}
     </header>
