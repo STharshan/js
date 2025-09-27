@@ -1,58 +1,93 @@
 import React from 'react';
 
 const ServiceSafety = () => {
-    return (
-    <div className="container mx-auto px-4 py-16">
-      <h2 className="text-4xl font-semibold text-center mb-8">
+  // iOS Safari hack to trigger :active styles
+  const touchStart = () => {};
+
+  const services = [
+    {
+      name: "Basic Service",
+      price: "£120",
+      highlight: false,
+      features: [
+        "Oil and filter change",
+        "Fluid level checks",
+        "Battery test",
+        "Tyre pressure check",
+        "Basic safety inspection",
+      ],
+    },
+    {
+      name: "Full Service",
+      price: "£180",
+      highlight: true,
+      features: [
+        "Everything in Basic Service",
+        "Comprehensive inspection",
+        "Brake system check",
+        "Suspension inspection",
+        "Exhaust system check",
+        "Detailed report",
+      ],
+    },
+    {
+      name: "Major Service",
+      price: "£250",
+      highlight: false,
+      features: [
+        "Everything in Full Service",
+        "Timing belt inspection",
+        "Coolant system service",
+        "Air filter replacement",
+        "Spark plug check/replace",
+        "Comprehensive diagnostics",
+      ],
+    },
+  ];
+
+  return (
+    <section className="container mx-auto px-6 sm:px-8 lg:px-12 py-16">
+      <h2 className="text-4xl font-semibold text-center mb-6 text-gray-900">
         Service Intervals
       </h2>
-      <p className="text-center text-lg mb-8">
+      <p className="text-center text-lg mb-12 text-gray-700">
         Regular servicing keeps your vehicle running efficiently and helps prevent costly breakdowns.
       </p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* Basic Service */}
-        <div className="service-card bg-white p-6 rounded-lg shadow-lg">
-          <h3 className="text-2xl font-semibold text-teal-600">Basic Service</h3>
-          <p className="text-xl text-teal-500">£120</p>
-          <ul className="mt-4 space-y-2">
-            <li>• Oil and filter change</li>
-            <li>• Fluid level checks</li>
-            <li>• Battery test</li>
-            <li>• Tyre pressure check</li>
-            <li>• Basic safety inspection</li>
-          </ul>
-        </div>
 
-        {/* Full Service */}
-        <div className="service-card bg-teal-100 p-6 rounded-lg shadow-lg">
-          <h3 className="text-2xl font-semibold text-teal-600">Full Service</h3>
-          <p className="text-xl text-teal-500">£180</p>
-          <p className="text-md text-teal-500 font-medium mt-2">Most Popular</p>
-          <ul className="mt-4 space-y-2">
-            <li>• Everything in Basic Service</li>
-            <li>• Comprehensive inspection</li>
-            <li>• Brake system check</li>
-            <li>• Suspension inspection</li>
-            <li>• Exhaust system check</li>
-            <li>• Detailed report</li>
-          </ul>
-        </div>
-
-        {/* Major Service */}
-        <div className="service-card bg-white p-6 rounded-lg shadow-lg">
-          <h3 className="text-2xl font-semibold text-teal-600">Major Service</h3>
-          <p className="text-xl text-teal-500">£250</p>
-          <ul className="mt-4 space-y-2">
-            <li>• Everything in Full Service</li>
-            <li>• Timing belt inspection</li>
-            <li>• Coolant system service</li>
-            <li>• Air filter replacement</li>
-            <li>• Spark plug check/replace</li>
-            <li>• Comprehensive diagnostics</li>
-          </ul>
-        </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {services.map((service, idx) => (
+          <div
+            key={idx}
+            role="button"
+            tabIndex={0}
+            onTouchStart={touchStart}
+            className={`
+              p-8 rounded-xl shadow-md bg-white
+              transition-all duration-300 cursor-pointer select-none
+              hover:scale-105
+              hover:shadow-[0_0_25px_#0d9488]
+              active:shadow-[0_0_25px_#0d9488]
+              ${service.highlight ? "bg-teal-50 border border-teal-200" : ""}
+            `}
+          >
+            <h3 className="text-2xl font-semibold text-teal-600 mb-2">
+              {service.name}
+            </h3>
+            <p className="text-xl font-bold text-teal-500">{service.price}</p>
+            {service.highlight && (
+              <p className="text-md text-orange-500 font-medium mt-1">
+                Most Popular
+              </p>
+            )}
+            <ul className="mt-5 space-y-2 text-gray-700">
+              {service.features.map((feature, i) => (
+                <li key={i}>• {feature}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
-    </div>
+    </section>
   );
 };
 
