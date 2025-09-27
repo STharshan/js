@@ -1,35 +1,60 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FiClock } from "react-icons/fi";
 import { IoLocationOutline } from "react-icons/io5";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const HeroSection = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
-    <section className="relative bg-white py-20 lg:py-25">
+    <section className="relative bg-white py-16 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left side content */}
-          <div className="space-y-8">
+          {/* ✅ Left side content always first */}
+          <div
+            className="space-y-8 text-center lg:text-left"
+            data-aos="fade-right"
+          >
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
-              Professional <span className="text-teal-600">Automotive Services</span>
+              Professional{" "}
+              <span className="text-teal-600">Automotive Services</span>
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
-              Expert car repairs, MOT testing, and maintenance services you can trust. 
-              Over 15 years of experience keeping Sheffield's vehicles running smoothly.
+
+            <p
+              className="text-lg sm:text-xl text-gray-600 leading-relaxed"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              Expert car repairs, MOT testing, and maintenance services you can
+              trust. Over 15 years of experience keeping Sheffield's vehicles
+              running smoothly.
             </p>
 
             {/* Rating and Customer count */}
-            <div className="flex items-center space-x-2">
+            <div
+              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-2 sm:gap-4"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               <span className="text-orange-500 text-2xl">★★★★★</span>
               <p className="text-gray-600">4.9/5 Rating</p>
-              <p className="text-gray-600 px-3">500+ Happy Customers</p>
+              <p className="text-gray-600">500+ Happy Customers</p>
             </div>
 
-            {/* ✅ Updated Buttons */}
-            <div className="flex space-x-6">
+            {/* Buttons */}
+            <div
+              className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4 sm:gap-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
               <Link
                 to="/contact"
-                className="bg-teal-500 text-white px-6 py-2 rounded-md hover:bg-teal-600 transition duration-300 flex items-center space-x-2"
+                className="bg-teal-500 text-white px-6 py-3 rounded-md hover:bg-teal-600 transition duration-300 flex items-center justify-center space-x-2"
               >
                 <FaPhoneAlt className="w-4 h-4" />
                 <span>Book Service Now</span>
@@ -37,30 +62,36 @@ const HeroSection = () => {
 
               <Link
                 to="/services/mot"
-                className="bg-teal-500 text-white px-6 py-2 rounded-md hover:bg-teal-600 transition duration-300"
+                className="bg-teal-500 text-white px-6 py-3 rounded-md hover:bg-teal-600 transition duration-300 text-center"
               >
                 MOT Testing
               </Link>
             </div>
 
             {/* Details */}
-            <div className="text-gray-600 flex items-center space-x-50">
+            <div
+              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-8"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
               {/* Clock */}
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center gap-2">
                 <FiClock className="w-5 h-5 text-gray-600" />
-                <div className="flex flex-col text-gray-600">
+                <div>
                   <p className="font-semibold">Open Mon-Fri</p>
                   <p className="text-sm">8:00 AM - 6:00 PM</p>
                 </div>
               </div>
 
               {/* Location */}
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center gap-2">
                 <IoLocationOutline className="w-5 h-5 text-gray-600" />
-                <div className="flex flex-col text-gray-600">
+                <div>
                   <span>
-                    New Edlington,<br /> 
-                    Doncaster DN12 1DJ,<br /> 
+                    New Edlington,
+                    <br />
+                    Doncaster DN12 1DJ,
+                    <br />
                     United Kingdom
                   </span>
                 </div>
@@ -68,12 +99,12 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right side image */}
-          <div className="relative">
+          {/* ✅ Right side image always second (mobile shows after content) */}
+          <div className="relative" data-aos="zoom-in">
             <img
               src="empty.svg"
               alt="Automotive Service"
-              className="object-cover w-full h-full rounded-md"
+              className="object-cover w-full min-h-[250px] sm:min-h-[350px] rounded-md"
             />
           </div>
         </div>

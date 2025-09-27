@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FiAward, FiCheckCircle, FiUsers } from 'react-icons/fi';
 import { LuClock4, LuShield, LuWrench } from 'react-icons/lu';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const services = [
   {
@@ -36,19 +38,39 @@ const services = [
 ];
 
 const WhyChooseJSAutomotive = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: false }); // animate every scroll up/down
+  }, []);
+
   return (
     <section className="py-16 bg-gray-100">
       <div className="max-w-7xl mx-auto text-center px-4">
-        <h2 className="text-4xl font-semibold mb-6">Why Choose JS Automotive?</h2>
-        <p className="text-xl max-w-4xl mx-auto mb-12 text-gray-800">
+        <h2
+          className="text-4xl font-semibold mb-6"
+          data-aos="fade-down"
+        >
+          Why Choose JS Automotive?
+        </h2>
+        <p
+          className="text-xl max-w-4xl mx-auto mb-12 text-gray-800"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           We're not just another garage. We're your trusted automotive partner, committed to keeping you safe on the road with honest, professional service.
         </p>
+
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-lg border-gray-300 border flex flex-col items-center 
-              transform transition duration-300 hover:scale-105 hover:shadow-2xl hover:z-10"
+              data-aos={index % 2 === 0 ? 'fade-up' : 'fade-down'}
+              data-aos-delay={index * 100}
+              className="
+                bg-white p-6 rounded-lg shadow-md border border-gray-300 flex flex-col items-center
+                transform transition duration-300
+                hover:scale-105 hover:shadow-[0_0_25px_#00BFA5]
+                active:shadow-[0_0_25px_#00BFA5]
+              "
             >
               <div className="mb-4 bg-teal-100 text-teal-800 rounded-full p-3">
                 {service.icon}
