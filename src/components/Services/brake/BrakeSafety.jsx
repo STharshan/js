@@ -1,18 +1,25 @@
 import React from 'react';
 
 const BrakeSafety = () => {
+  // iOS Safari hack to ensure :active triggers
+  const touchStart = () => {};
+
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-semibold text-center mb-8">
+    <section className="container mx-auto px-6 sm:px-8 lg:px-18 py-16">
+      {/* Heading */}
+      <h1 className="text-4xl font-bold text-center mb-6 text-gray-900">
         Brake Safety Warning Signs
       </h1>
-      <p className="text-lg text-center mb-8">
+      <p className="text-lg text-center mb-12 text-gray-700 max-w-3xl mx-auto">
         Don't ignore these warning signs. Your brakes are your vehicle's most important safety system.
       </p>
 
-      <div className="bg-red-100 p-4 rounded-md mb-8">
-        <h2 className="text-xl font-semibold text-red-600 mb-4">When to Get Your Brakes Checked</h2>
-        <ul className="list-disc list-inside text-lg text-red-600">
+      {/* Warning Section */}
+      <div className="bg-red-100 p-8 rounded-xl mb-12 shadow-md">
+        <h2 className="text-2xl font-semibold text-red-600 mb-4">
+          When to Get Your Brakes Checked
+        </h2>
+        <ul className="list-disc list-inside text-lg text-red-700 space-y-2">
           <li>Squealing or grinding noises</li>
           <li>Brake pedal feels spongy or soft</li>
           <li>Vehicle pulls to one side when braking</li>
@@ -24,11 +31,22 @@ const BrakeSafety = () => {
         </ul>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-8">
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h3 className="text-xl font-semibold text-teal-600 mb-4">Brake Pad Replacement</h3>
-          <p className="text-lg mb-4">From £80</p>
-          <ul className="list-disc list-inside text-lg">
+      {/* Services Grid */}
+      <div className="grid md:grid-cols-2 gap-10">
+        {/* Brake Pad Replacement */}
+        <div
+          role="button"
+          tabIndex={0}
+          onTouchStart={touchStart}
+          className="bg-white p-8 rounded-xl shadow-md transition-all duration-300 
+                     hover:scale-105 hover:shadow-[0_0_25px_#0d9488] 
+                     active:shadow-[0_0_25px_#0d9488] cursor-pointer select-none"
+        >
+          <h3 className="text-2xl font-semibold text-teal-600 mb-3">
+            Brake Pad Replacement
+          </h3>
+          <p className="text-lg font-medium text-orange-600 mb-4">From £80</p>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
             <li>Quality brake pads fitted</li>
             <li>Brake disc inspection</li>
             <li>Brake fluid level check</li>
@@ -36,10 +54,20 @@ const BrakeSafety = () => {
           </ul>
         </div>
 
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h3 className="text-xl font-semibold text-teal-600 mb-4">Full Brake Service</h3>
-          <p className="text-lg mb-4">From £150</p>
-          <ul className="list-disc list-inside text-lg">
+        {/* Full Brake Service */}
+        <div
+          role="button"
+          tabIndex={0}
+          onTouchStart={touchStart}
+          className="bg-white p-8 rounded-xl shadow-md transition-all duration-300 
+                     hover:scale-105 hover:shadow-[0_0_25px_#0d9488] 
+                     active:shadow-[0_0_25px_#0d9488] cursor-pointer select-none"
+        >
+          <h3 className="text-2xl font-semibold text-teal-600 mb-3">
+            Full Brake Service
+          </h3>
+          <p className="text-lg font-medium text-orange-600 mb-4">From £150</p>
+          <ul className="list-disc list-inside text-gray-700 space-y-2">
             <li>Brake pads and discs</li>
             <li>Brake fluid replacement</li>
             <li>Brake system inspection</li>
@@ -47,7 +75,7 @@ const BrakeSafety = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
