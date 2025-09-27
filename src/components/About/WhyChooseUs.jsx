@@ -1,31 +1,30 @@
 import React from 'react';
-import { FaShieldAlt, FaClock, FaTrophy, FaUsers, FaTools, FaCheckCircle } from 'react-icons/fa'; // Using React Icons
+import { FaShieldAlt, FaClock, FaTrophy, FaUsers, FaTools, FaCheckCircle } from 'react-icons/fa';
 
 const WhyChooseUs = () => {
-  // Data for each card
   const cardData = [
     {
       icon: <FaShieldAlt size={40} className="text-teal-500" />,
-      bgColor: "bg-teal-200", // Different background color for this icon
+      bgColor: "bg-teal-200",
       title: 'Fully Insured & Certified',
       description:
         "All work is fully guaranteed with comprehensive insurance coverage. We're DVSA approved for MOT testing and hold all necessary certifications for professional automotive repair."
     },
     {
       icon: <FaClock size={40} className="text-teal-500" />,
-      bgColor: "bg-orange-200", // Different background color for this icon
+      bgColor: "bg-orange-200",
       title: 'Fast Turnaround',
       description:
         'Most services completed same day. We understand your time is valuable and work efficiently to get you back on the road quickly without compromising on quality.'
     },
     {
       icon: <FaTrophy size={40} className="text-teal-500" />,
-      bgColor: "bg-yellow-200", // Different background color for this icon
+      bgColor: "bg-yellow-200",
       title: '15+ Years Experience',
       description:
         "Decades of automotive expertise working on all makes and models. Our experience means we can quickly diagnose issues and provide effective, long-lasting solutions."
     },
-       {
+    {
       icon: <FaUsers size={40} className="text-orange-500" />,
       title: 'Trusted by 500+ Customers',
       description:
@@ -55,9 +54,18 @@ const WhyChooseUs = () => {
 
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {cardData.map((card, index) => (
-            <div key={index} className="bg-white p-8 rounded-xl shadow-lg text-left">
+            <div
+              key={index}
+              className="
+                bg-white p-8 rounded-xl shadow-md text-left
+                transition-all duration-300
+                hover:shadow-[0_0_25px_#00BFA5]
+                active:shadow-[0_0_25px_#00BFA5]
+                hover:scale-105
+              "
+            >
               <div className="flex mb-6">
-                <div className={`${card.bgColor} rounded-full p-3`}>
+                <div className={`${card.bgColor || "bg-gray-200"} rounded-full p-3`}>
                   {card.icon}
                 </div>
               </div>
