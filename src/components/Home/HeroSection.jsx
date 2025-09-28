@@ -12,21 +12,23 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative bg-white py-16 lg:py-24">
+    <section className="relative bg-white dark:bg-gray-900 py-16 lg:py-24 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* ✅ Left side content always first */}
+          {/* ✅ Left side content */}
           <div
             className="space-y-8 text-center lg:text-left"
             data-aos="fade-right"
           >
-            <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+            <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-gray-900 dark:text-gray-100">
               Professional{" "}
-              <span className="text-teal-600">Automotive Services</span>
+              <span className="text-teal-600 dark:text-teal-400">
+                Automotive Services
+              </span>
             </h1>
 
             <p
-              className="text-lg sm:text-xl text-gray-600 leading-relaxed"
+              className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
               data-aos="fade-up"
               data-aos-delay="200"
             >
@@ -42,8 +44,10 @@ const HeroSection = () => {
               data-aos-delay="300"
             >
               <span className="text-orange-500 text-2xl">★★★★★</span>
-              <p className="text-gray-600">4.9/5 Rating</p>
-              <p className="text-gray-600">500+ Happy Customers</p>
+              <p className="text-gray-600 dark:text-gray-300">4.9/5 Rating</p>
+              <p className="text-gray-600 dark:text-gray-300">
+                500+ Happy Customers
+              </p>
             </div>
 
             {/* Buttons */}
@@ -76,17 +80,21 @@ const HeroSection = () => {
             >
               {/* Clock */}
               <div className="flex items-center gap-2">
-                <FiClock className="w-5 h-5 text-gray-600" />
+                <FiClock className="w-5 h-5 text-gray-600 dark:text-gray-300" />
                 <div>
-                  <p className="font-semibold">Open Mon-Fri</p>
-                  <p className="text-sm">8:00 AM - 6:00 PM</p>
+                  <p className="font-semibold text-gray-900 dark:text-gray-100">
+                    Open Mon-Fri
+                  </p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    8:00 AM - 6:00 PM
+                  </p>
                 </div>
               </div>
 
               {/* Location */}
               <div className="flex items-center gap-2">
-                <IoLocationOutline className="w-5 h-5 text-gray-600" />
-                <div>
+                <IoLocationOutline className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+                <div className="text-gray-900 dark:text-gray-200 text-sm sm:text-base">
                   <span>
                     New Edlington,
                     <br />
@@ -99,12 +107,12 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* ✅ Right side image always second (mobile shows after content) */}
+          {/* ✅ Right side image */}
           <div className="relative" data-aos="zoom-in">
             <img
               src="empty.svg"
               alt="Automotive Service"
-              className="object-cover w-full min-h-[250px] sm:min-h-[350px] rounded-md"
+              className="object-cover w-full min-h-[250px] sm:min-h-[350px] rounded-md border border-gray-200 dark:border-gray-700"
             />
           </div>
         </div>

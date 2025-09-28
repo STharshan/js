@@ -27,13 +27,16 @@ const ExpertServices = () => {
   }, []);
 
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-4xl font-bold text-gray-900 mb-8" data-aos="fade-down">
+        <h2
+          className="text-4xl font-bold text-gray-900 dark:text-gray-100 mb-8"
+          data-aos="fade-down"
+        >
           Our Expert Services
         </h2>
         <p
-          className="text-xl text-gray-600 mb-12 max-w-3xl mx-auto"
+          className="text-xl text-gray-600 dark:text-gray-300 mb-12 max-w-3xl mx-auto"
           data-aos="fade-up"
           data-aos-delay="200"
         >
@@ -48,32 +51,48 @@ const ExpertServices = () => {
               data-aos={index % 2 === 0 ? 'fade-up' : 'fade-down'}
               data-aos-delay={index * 100}
               className="
-                bg-gray-50 p-6 rounded-lg shadow-md 
+                bg-gray-50 dark:bg-gray-800 
+                p-6 rounded-lg shadow-md 
                 hover:shadow-[0_0_25px_#00BFA5] hover:scale-105 
                 active:shadow-[0_0_25px_#00BFA5]
                 transition-all duration-300 cursor-pointer
+                flex flex-col h-full
               "
             >
-              <div className="flex justify-center text-teal-800 mb-4">
-                <div className="bg-teal-100 rounded-full p-4">{service.icon}</div>
+              {/* Icon */}
+              <div className="flex justify-center text-teal-800 dark:text-teal-400 mb-4">
+                <div className="bg-teal-100 dark:bg-teal-900 rounded-full p-4">
+                  {service.icon}
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">
+
+              {/* Title & Price */}
+              <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2">
                 {service.name}
               </h3>
-              <p className="text-lg font-semibold text-orange-500">{service.price}</p>
-              <p className="text-gray-500 mb-4 mt-5">{service.description}</p>
+              <p className="text-lg font-semibold text-orange-500">
+                {service.price}
+              </p>
 
-              {/* Learn More Button */}
-              <Link
-                to={service.path}
-                className="mt-4 inline-block py-1 px-16 border-gray-300 border rounded-md hover:bg-orange-500 hover:text-white cursor-pointer transition"
-              >
-                Learn More
-              </Link>
+              {/* Description expands to push button down */}
+              <p className="text-gray-500 dark:text-gray-400 mb-4 mt-5 flex-grow">
+                {service.description}
+              </p>
+
+              {/* Learn More Button pinned bottom */}
+              <div className="mt-auto">
+                <Link
+                  to={service.path}
+                  className="inline-block py-1 px-16 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-orange-500 hover:text-white cursor-pointer transition"
+                >
+                  Learn More
+                </Link>
+              </div>
             </div>
           ))}
         </div>
 
+        {/* CTA */}
         <div className="text-center mt-8" data-aos="zoom-in">
           <Link
             to="/contact"
