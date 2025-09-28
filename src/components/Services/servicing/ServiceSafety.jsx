@@ -46,11 +46,11 @@ const ServiceSafety = () => {
   ];
 
   return (
-    <section className="container mx-auto px-6 sm:px-8 lg:px-12 py-16">
-      <h2 className="text-4xl font-semibold text-center mb-6 text-gray-900">
+    <section className="container mx-auto px-6 sm:px-8 lg:px-12 py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <h2 className="text-4xl font-semibold text-center mb-6 text-gray-900 dark:text-white transition-colors duration-300">
         Service Intervals
       </h2>
-      <p className="text-center text-lg mb-12 text-gray-700">
+      <p className="text-center text-lg mb-12 text-gray-700 dark:text-gray-300 transition-colors duration-300">
         Regular servicing keeps your vehicle running efficiently and helps prevent costly breakdowns.
       </p>
 
@@ -62,24 +62,26 @@ const ServiceSafety = () => {
             tabIndex={0}
             onTouchStart={touchStart}
             className={`
-              p-8 rounded-xl shadow-md bg-white
+              p-8 rounded-xl shadow-md 
+              bg-white dark:bg-gray-800 
+              border border-gray-200 dark:border-gray-700
               transition-all duration-300 cursor-pointer select-none
               hover:scale-105
               hover:shadow-[0_0_25px_#0d9488]
               active:shadow-[0_0_25px_#0d9488]
-              ${service.highlight ? "bg-teal-50 border border-teal-200" : ""}
+              ${service.highlight ? "bg-teal-50 dark:bg-teal-900 border-teal-200 dark:border-teal-700" : ""}
             `}
           >
-            <h3 className="text-2xl font-semibold text-teal-600 mb-2">
+            <h3 className="text-2xl font-semibold text-teal-600 dark:text-teal-400 mb-2">
               {service.name}
             </h3>
-            <p className="text-xl font-bold text-teal-500">{service.price}</p>
+            <p className="text-xl font-bold text-teal-500 dark:text-teal-300">{service.price}</p>
             {service.highlight && (
-              <p className="text-md text-orange-500 font-medium mt-1">
+              <p className="text-md text-orange-500 dark:text-orange-400 font-medium mt-1">
                 Most Popular
               </p>
             )}
-            <ul className="mt-5 space-y-2 text-gray-700">
+            <ul className="mt-5 space-y-2 text-gray-700 dark:text-gray-300">
               {service.features.map((feature, i) => (
                 <li key={i}>• {feature}</li>
               ))}

@@ -5,7 +5,7 @@ const ServiceServiceInfo = () => {
   const touchStart = () => {};
 
   return (
-    <section className="container mx-auto px-6 sm:px-8 lg:px-12 py-16">
+    <section className="container mx-auto px-6 sm:px-8 lg:px-12 py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <div className="grid md:grid-cols-2 gap-10">
         
         {/* What's Included Section */}
@@ -14,53 +14,44 @@ const ServiceServiceInfo = () => {
           tabIndex={0}
           onTouchStart={touchStart}
           className="
-            bg-white p-8 rounded-xl shadow-md
+            bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md
+            border border-gray-200 dark:border-gray-700
             transition-all duration-300 cursor-pointer select-none
             hover:scale-105
             hover:shadow-[0_0_25px_#0d9488]
             active:shadow-[0_0_25px_#0d9488]
           "
         >
-          <h2 className="text-2xl font-semibold mb-4 text-gray-900">
+          <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
             What's Included
           </h2>
-          <ul className="list-none space-y-3 text-gray-700">
-            <li className="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Oil and filter change with quality parts</span>
-            </li>
-            <li className="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Comprehensive multi-point inspection</span>
-            </li>
-            <li className="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Fluid level checks and top-ups</span>
-            </li>
-            <li className="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Battery and charging system test</span>
-            </li>
-            <li className="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Tyre condition and pressure check</span>
-            </li>
-            <li className="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-teal-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Detailed service report with recommendations</span>
-            </li>
+          <ul className="list-none space-y-3 text-gray-700 dark:text-gray-300">
+            {[
+              "Oil and filter change with quality parts",
+              "Comprehensive multi-point inspection",
+              "Fluid level checks and top-ups",
+              "Battery and charging system test",
+              "Tyre condition and pressure check",
+              "Detailed service report with recommendations",
+            ].map((item, idx) => (
+              <li key={idx} className="flex items-center space-x-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 text-teal-500"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>{item}</span>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -70,53 +61,44 @@ const ServiceServiceInfo = () => {
           tabIndex={0}
           onTouchStart={touchStart}
           className="
-            bg-white p-8 rounded-xl shadow-md
+            bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md
+            border border-gray-200 dark:border-gray-700
             transition-all duration-300 cursor-pointer select-none
             hover:scale-105
             hover:shadow-[0_0_25px_#0d9488]
             active:shadow-[0_0_25px_#0d9488]
           "
         >
-          <h2 className="text-2xl font-semibold mb-4 text-gray-900">
+          <h2 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">
             Why Choose Our Service
           </h2>
-          <ul className="list-none space-y-3 text-gray-700">
-            <li className="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Manufacturer-approved parts and fluids</span>
-            </li>
-            <li className="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Experienced technicians</span>
-            </li>
-            <li className="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Digital service records</span>
-            </li>
-            <li className="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>12-month service warranty</span>
-            </li>
-            <li className="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Service reminder notifications</span>
-            </li>
-            <li className="flex items-center space-x-2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-orange-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Competitive pricing</span>
-            </li>
+          <ul className="list-none space-y-3 text-gray-700 dark:text-gray-300">
+            {[
+              "Manufacturer-approved parts and fluids",
+              "Experienced technicians",
+              "Digital service records",
+              "12-month service warranty",
+              "Service reminder notifications",
+              "Competitive pricing",
+            ].map((item, idx) => (
+              <li key={idx} className="flex items-center space-x-2">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6 text-orange-500"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+                <span>{item}</span>
+              </li>
+            ))}
           </ul>
         </div>
       </div>
