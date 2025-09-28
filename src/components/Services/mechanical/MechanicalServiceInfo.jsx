@@ -5,19 +5,22 @@ const MechanicalServiceInfo = () => {
   const touchStart = () => {};
 
   return (
-    <section className="container mx-auto px-6 sm:px-8 lg:px-18 py-16">
+    <section className="container mx-auto px-6 sm:px-8 lg:px-18 py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="grid md:grid-cols-2 gap-10">
         {/* What's Included Section */}
         <div
           role="button"
           tabIndex={0}
           onTouchStart={touchStart}
-          className="bg-white p-8 rounded-xl shadow-md transition-all duration-300 cursor-pointer select-none
+          className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md 
+                     transition-all duration-300 cursor-pointer select-none
                      hover:scale-105 md:hover:shadow-[0_0_25px_#0d9488]
                      active:shadow-[0_0_25px_#0d9488]"
         >
-          <h2 className="text-2xl font-semibold mb-6 text-gray-900">What's Included</h2>
-          <ul className="list-none space-y-4 text-gray-700">
+          <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white transition-colors duration-300">
+            What's Included
+          </h2>
+          <ul className="list-none space-y-4 text-gray-700 dark:text-gray-300 transition-colors duration-300">
             {[
               "Comprehensive diagnostic assessment",
               "Detailed repair estimate before work begins",
@@ -29,12 +32,17 @@ const MechanicalServiceInfo = () => {
               <li key={i} className="flex items-center space-x-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-teal-500"
+                  className="h-6 w-6 text-teal-500 dark:text-teal-400"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
                 </svg>
                 <span>{item}</span>
               </li>
@@ -47,12 +55,15 @@ const MechanicalServiceInfo = () => {
           role="button"
           tabIndex={0}
           onTouchStart={touchStart}
-          className="bg-white p-8 rounded-xl shadow-md transition-all duration-300 cursor-pointer select-none
+          className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md 
+                     transition-all duration-300 cursor-pointer select-none
                      hover:scale-105 md:hover:shadow-[0_0_25px_#0d9488]
                      active:shadow-[0_0_25px_#0d9488]"
         >
-          <h2 className="text-2xl font-semibold mb-6 text-gray-900">Why Choose Our Service</h2>
-          <ul className="list-none space-y-4 text-gray-700">
+          <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white transition-colors duration-300">
+            Why Choose Our Service
+          </h2>
+          <ul className="list-none space-y-4 text-gray-700 dark:text-gray-300 transition-colors duration-300">
             {[
               "All makes and models serviced",
               "Latest diagnostic equipment",
@@ -64,12 +75,17 @@ const MechanicalServiceInfo = () => {
               <li key={i} className="flex items-center space-x-3">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-teal-500"
+                  className="h-6 w-6 text-orange-500 dark:text-orange-400"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M5 13l4 4L19 7"
+                  />
                 </svg>
                 <span>{item}</span>
               </li>

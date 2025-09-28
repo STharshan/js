@@ -12,8 +12,8 @@ const MechanicalServices = () => {
   ];
 
   return (
-    <section className="container mx-auto px-6 sm:px-8 lg:px-12 py-16">
-      <h2 className="text-3xl font-semibold text-center mb-12 text-gray-900">
+    <section className="container mx-auto px-6 sm:px-8 lg:px-12 py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
+      <h2 className="text-3xl font-semibold text-center mb-12 text-gray-900 dark:text-white transition-colors duration-300">
         Related Services
       </h2>
 
@@ -24,29 +24,26 @@ const MechanicalServices = () => {
             role="button"
             tabIndex={0}
             onTouchStart={touchStart} // ensures :active fires on iOS
-            className="
-              bg-white p-8 rounded-xl shadow-md
-              transition-all duration-300 cursor-pointer select-none
-              hover:scale-105
-              hover:shadow-[0_0_25px_#0d9488]   /* teal glow on hover (desktop only) */
-              active:shadow-[0_0_25px_#0d9488]  /* orange glow on tap/click */
-              focus-visible:ring-2 focus-visible:ring-teal-500
-              md:hover:shadow-[0_0_25px_#0d9488] /* hover only applies on desktop */
-            "
+            className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md
+                       transition-all duration-300 cursor-pointer select-none
+                       hover:scale-105
+                       hover:shadow-[0_0_25px_#0d9488]
+                       active:shadow-[0_0_25px_#0d9488]
+                       focus-visible:ring-2 focus-visible:ring-teal-500"
           >
-            <h3 className="text-xl font-semibold mb-3 text-gray-800">
+            <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white transition-colors duration-300">
               {service.name}
             </h3>
-            <p className="text-orange-500 mb-6 font-medium">{service.price}</p>
+            <p className="text-orange-500 dark:text-orange-400 mb-6 font-medium transition-colors duration-300">
+              {service.price}
+            </p>
             <Link
               to={service.path}
               onTouchStart={touchStart} // also needed for button press on iOS
-              className="
-                inline-block w-full text-center
-                bg-teal-500 text-white py-3 px-6 rounded-lg
-                hover:bg-orange-500 active:bg-orange-600
-                transition-colors duration-300
-              "
+              className="inline-block w-full text-center
+                         bg-teal-500 text-white py-3 px-6 rounded-lg
+                         hover:bg-orange-500 active:bg-orange-600
+                         transition-colors duration-300"
             >
               Learn More →
             </Link>
