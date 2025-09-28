@@ -1,26 +1,25 @@
 import React from 'react';
 
 const DPFServiceInfo = () => {
-  // iOS Safari hack to trigger :active styles
   const touchStart = () => {};
 
   return (
-    <section className="container mx-auto px-6 sm:px-10 lg:px-18 py-16">
+    <section className="container mx-auto px-6 sm:px-10 lg:px-18 py-16 bg-white dark:bg-[#0B1322] transition-colors duration-300">
       <div className="grid md:grid-cols-2 gap-10">
         {/* What's Included Section */}
         <div
           role="button"
           tabIndex={0}
           onTouchStart={touchStart}
-          className="bg-white p-8 rounded-xl shadow-md 
+          className="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-md 
                      transition-all duration-300 cursor-pointer select-none
                      hover:scale-105 hover:shadow-[0_0_25px_#0d9488]
                      active:shadow-[0_0_25px_#0d9488]"
         >
-          <h2 className="text-2xl font-semibold mb-6 text-gray-900">
+          <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
             What's Included
           </h2>
-          <ul className="list-none space-y-4 text-gray-700">
+          <ul className="list-none space-y-4 text-gray-700 dark:text-gray-300">
             {[
               "Comprehensive DPF system diagnosis",
               "Professional cleaning or regeneration",
@@ -55,15 +54,15 @@ const DPFServiceInfo = () => {
           role="button"
           tabIndex={0}
           onTouchStart={touchStart}
-          className="bg-white p-8 rounded-xl shadow-md 
+          className="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-md 
                      transition-all duration-300 cursor-pointer select-none
                      hover:scale-105 hover:shadow-[0_0_25px_#0d9488]
                      active:shadow-[0_0_25px_#0d9488]"
         >
-          <h2 className="text-2xl font-semibold mb-6 text-gray-900">
+          <h2 className="text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
             Why Choose Our Service
           </h2>
-          <ul className="list-none space-y-4 text-gray-700">
+          <ul className="list-none space-y-4 text-gray-700 dark:text-gray-300">
             {[
               "Specialist DPF equipment",
               "All diesel vehicles covered",

@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const DPFServices = () => {
-  // iOS Safari hack to trigger :active styles
   const touchStart = () => {};
 
   const services = [
@@ -24,8 +23,8 @@ const DPFServices = () => {
   ];
 
   return (
-    <section className="container mx-auto px-6 sm:px-10 lg:px-18 py-16">
-      <h2 className="text-3xl font-semibold text-center mb-12 text-gray-900">
+    <section className="container mx-auto px-6 sm:px-10 lg:px-18 py-16 bg-white dark:bg-[#0B1322] transition-colors duration-300">
+      <h2 className="text-3xl font-semibold text-center mb-12 text-gray-900 dark:text-white">
         Related Services
       </h2>
 
@@ -36,15 +35,17 @@ const DPFServices = () => {
             role="button"
             tabIndex={0}
             onTouchStart={touchStart}
-            className="bg-white p-8 rounded-xl shadow-md
+            className="bg-white dark:bg-gray-900 p-8 rounded-xl shadow-md
                        transition-all duration-300 cursor-pointer select-none
                        hover:scale-105 hover:shadow-[0_0_25px_#0d9488]
                        active:shadow-[0_0_25px_#0d9488]"
           >
-            <h3 className="text-xl font-semibold mb-3 text-gray-800">
+            <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">
               {service.name}
             </h3>
-            <p className="text-orange-500 mb-6 font-medium">{service.price}</p>
+            <p className="text-orange-500 dark:text-orange-300 mb-6 font-medium">
+              {service.price}
+            </p>
             <Link
               to={service.path}
               className="inline-block w-full text-center 

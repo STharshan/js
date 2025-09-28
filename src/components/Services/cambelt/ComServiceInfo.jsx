@@ -2,16 +2,16 @@ import React from 'react';
 
 const ComServiceInfo = () => {
   return (
-    <section className="container mx-auto px-6 sm:px-10 lg:px-18 py-16">
+    <section className="container mx-auto px-6 sm:px-10 lg:px-18 py-16 bg-white dark:bg-[#0B101B] transition-colors duration-300">
       <div className="grid md:grid-cols-2 gap-10">
         {/* What's Included Section */}
         <div
-          className="bg-white p-8 rounded-xl shadow-md
+          className="bg-white dark:bg-[#0B1322] p-8 rounded-xl shadow-md
                      transition-all duration-300
                      hover:scale-105 hover:shadow-[0_0_25px_#0d9488]
                      active:shadow-[0_0_25px_#0d9488]"
         >
-          <h2 className="text-2xl font-semibold mb-6 text-gray-800">
+          <h2 className="text-2xl font-semibold mb-6 text-gray-800 dark:text-white">
             What's Included
           </h2>
           <ul className="list-none space-y-4">
@@ -38,7 +38,7 @@ const ComServiceInfo = () => {
                     d="M5 13l4 4L19 7"
                   />
                 </svg>
-                <span className="text-gray-700">{item}</span>
+                <span className="text-gray-700 dark:text-gray-200">{item}</span>
               </li>
             ))}
           </ul>
@@ -46,12 +46,12 @@ const ComServiceInfo = () => {
 
         {/* Why Choose Our Service Section */}
         <div
-          className="bg-white p-8 rounded-xl shadow-md
+          className="bg-white dark:bg-[#0B1322] p-8 rounded-xl shadow-md
                      transition-all duration-300
                      hover:scale-105 hover:shadow-[0_0_25px_#0d9488]
                      active:shadow-[0_0_25px_#0d9488]"
         >
-          <h2 className="text-2xl font-semibold mb-6 text-gray-800">
+          <h2 className="text-2xl font-semibold mb-6 text-gray-800 dark:text-white">
             Why Choose Our Service
           </h2>
           <ul className="list-none space-y-4">
@@ -78,7 +78,7 @@ const ComServiceInfo = () => {
                     d="M5 13l4 4L19 7"
                   />
                 </svg>
-                <span className="text-gray-700">{item}</span>
+                <span className="text-gray-700 dark:text-gray-200">{item}</span>
               </li>
             ))}
           </ul>
