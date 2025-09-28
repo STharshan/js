@@ -1,25 +1,27 @@
 import React from 'react';
 
 const BrakeSafety = () => {
-  // iOS Safari hack to ensure :active triggers
   const touchStart = () => {};
 
   return (
-    <section className="container mx-auto px-6 sm:px-8 lg:px-18 py-16">
+    <section
+      className="container mx-auto px-6 sm:px-8 lg:px-18 py-16
+                 bg-white dark:bg-[#0E1625] transition-colors duration-300"
+    >
       {/* Heading */}
-      <h1 className="text-4xl font-bold text-center mb-6 text-gray-900">
+      <h1 className="text-4xl font-bold text-center mb-6 text-gray-900 dark:text-white">
         Brake Safety Warning Signs
       </h1>
-      <p className="text-lg text-center mb-12 text-gray-700 max-w-3xl mx-auto">
+      <p className="text-lg text-center mb-12 text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
         Don't ignore these warning signs. Your brakes are your vehicle's most important safety system.
       </p>
 
       {/* Warning Section */}
-      <div className="bg-red-100 p-8 rounded-xl mb-12 shadow-md">
-        <h2 className="text-2xl font-semibold text-red-600 mb-4">
+      <div className="bg-red-100 dark:bg-red-900/30 p-8 rounded-xl mb-12 shadow-md">
+        <h2 className="text-2xl font-semibold text-red-600 dark:text-red-400 mb-4">
           When to Get Your Brakes Checked
         </h2>
-        <ul className="list-disc list-inside text-lg text-red-700 space-y-2">
+        <ul className="list-disc list-inside text-lg text-red-700 dark:text-red-300 space-y-2">
           <li>Squealing or grinding noises</li>
           <li>Brake pedal feels spongy or soft</li>
           <li>Vehicle pulls to one side when braking</li>
@@ -38,15 +40,16 @@ const BrakeSafety = () => {
           role="button"
           tabIndex={0}
           onTouchStart={touchStart}
-          className="bg-white p-8 rounded-xl shadow-md transition-all duration-300 
+          className="p-8 rounded-xl shadow-md transition-all duration-300 
                      hover:scale-105 hover:shadow-[0_0_25px_#0d9488] 
-                     active:shadow-[0_0_25px_#0d9488] cursor-pointer select-none"
+                     active:shadow-[0_0_25px_#0d9488] cursor-pointer select-none
+                     bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
         >
-          <h3 className="text-2xl font-semibold text-teal-600 mb-3">
+          <h3 className="text-2xl font-semibold text-teal-600 dark:text-teal-400 mb-3">
             Brake Pad Replacement
           </h3>
-          <p className="text-lg font-medium text-orange-600 mb-4">From £80</p>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <p className="text-lg font-medium text-orange-600 dark:text-orange-400 mb-4">From £80</p>
+          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
             <li>Quality brake pads fitted</li>
             <li>Brake disc inspection</li>
             <li>Brake fluid level check</li>
@@ -59,15 +62,16 @@ const BrakeSafety = () => {
           role="button"
           tabIndex={0}
           onTouchStart={touchStart}
-          className="bg-white p-8 rounded-xl shadow-md transition-all duration-300 
+          className="p-8 rounded-xl shadow-md transition-all duration-300 
                      hover:scale-105 hover:shadow-[0_0_25px_#0d9488] 
-                     active:shadow-[0_0_25px_#0d9488] cursor-pointer select-none"
+                     active:shadow-[0_0_25px_#0d9488] cursor-pointer select-none
+                     bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
         >
-          <h3 className="text-2xl font-semibold text-teal-600 mb-3">
+          <h3 className="text-2xl font-semibold text-teal-600 dark:text-teal-400 mb-3">
             Full Brake Service
           </h3>
-          <p className="text-lg font-medium text-orange-600 mb-4">From £150</p>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <p className="text-lg font-medium text-orange-600 dark:text-orange-400 mb-4">From £150</p>
+          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
             <li>Brake pads and discs</li>
             <li>Brake fluid replacement</li>
             <li>Brake system inspection</li>

@@ -1,27 +1,28 @@
 import React from 'react';
 
 const BrakeServiceInfo = () => {
-  // iOS Safari hack to trigger :active styles
   const touchStart = () => {};
 
   return (
-    <section className="container mx-auto px-6 sm:px-8 lg:px-18 py-16">
+    <section
+      className="container mx-auto px-6 sm:px-8 lg:px-18 py-16
+                 bg-white dark:bg-[#0E1625] transition-colors duration-300"
+    >
       <div className="grid md:grid-cols-2 gap-10">
         {/* What's Included Section */}
         <div
           role="button"
           tabIndex={0}
           onTouchStart={touchStart}
-          className="bg-white p-8 rounded-xl shadow-md transition-all duration-300
+          className="p-8 rounded-xl shadow-md transition-all duration-300
                      cursor-pointer select-none
                      hover:scale-105 
-                     hover:shadow-[0_0_25px_#0d9488]
-                     active:shadow-[0_0_25px_#0d9488]"
+                     hover:shadow-[0_0_25px_#0d9488] 
+                     active:shadow-[0_0_25px_#0d9488]
+                     bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
         >
-          <h2 className="text-2xl font-semibold mb-6 text-gray-900">
-            What's Included
-          </h2>
-          <ul className="list-none space-y-3 text-gray-700">
+          <h2 className="text-2xl font-semibold mb-6">What's Included</h2>
+          <ul className="list-none space-y-3 text-gray-700 dark:text-gray-300">
             {[
               "Comprehensive brake system inspection",
               "Quality brake pads or discs fitted",
@@ -56,16 +57,15 @@ const BrakeServiceInfo = () => {
           role="button"
           tabIndex={0}
           onTouchStart={touchStart}
-          className="bg-white p-8 rounded-xl shadow-md transition-all duration-300
+          className="p-8 rounded-xl shadow-md transition-all duration-300
                      cursor-pointer select-none
                      hover:scale-105 
                      hover:shadow-[0_0_25px_#0d9488]
-                     active:shadow-[0_0_25px_#0d9488]"
+                     active:shadow-[0_0_25px_#0d9488]
+                     bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
         >
-          <h2 className="text-2xl font-semibold mb-6 text-gray-900">
-            Why Choose Our Service
-          </h2>
-          <ul className="list-none space-y-3 text-gray-700">
+          <h2 className="text-2xl font-semibold mb-6">Why Choose Our Service</h2>
+          <ul className="list-none space-y-3 text-gray-700 dark:text-gray-300">
             {[
               "Premium quality brake components",
               "Expert brake technicians",
