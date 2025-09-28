@@ -2,21 +2,25 @@ import React from 'react';
 
 const FindOurWorkshop = () => {
   return (
-    <div className="container mx-auto px-6 sm:px-8 lg:px-22 py-12">
-      <h2 className="text-3xl font-semibold text-center mb-8">Find Our Workshop</h2>
-      <p className="text-lg text-center mb-12">
+    <div className="container mx-auto px-6 sm:px-8 lg:px-22 py-12 transition-colors duration-300 bg-white dark:bg-gray-900">
+      <h2 className="text-3xl font-semibold text-center mb-8 text-gray-900 dark:text-gray-100">
+        Find Our Workshop
+      </h2>
+      <p className="text-lg text-center mb-12 text-gray-700 dark:text-gray-300">
         Conveniently located in Sheffield with easy access and free customer parking
       </p>
 
       <div className="grid md:grid-cols-2 gap-8">
         {/* Left Section: Workshop Location */}
-        <div className="bg-white p-6 rounded-lg shadow-lg">
-          <h3 className="text-xl font-semibold mb-4">Workshop Location</h3>
-          <p className="mb-4">
+        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors duration-300">
+          <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
+            Workshop Location
+          </h3>
+          <p className="mb-4 text-gray-700 dark:text-gray-300">
             Our fully equipped workshop is centrally located in Sheffield, making it easy to reach from all
             areas of the city and surrounding regions.
           </p>
-          <ul className="list-none space-y-3">
+          <ul className="list-none space-y-3 text-gray-700 dark:text-gray-300">
             <li>
               <strong>Easy Access:</strong> Close to major roads and public transport
             </li>
@@ -30,8 +34,10 @@ const FindOurWorkshop = () => {
         </div>
 
         {/* Right Section: Map */}
-        <div className="bg-gray-100 p-6 rounded-lg shadow-lg">
-          <h3 className="text-xl font-semibold mb-4">Sheffield Workshop</h3>
+        <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors duration-300">
+          <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
+            Sheffield Workshop
+          </h3>
 
           {/* Google Map Embed */}
           <div className="w-full h-64 rounded-lg overflow-hidden">
@@ -50,9 +56,11 @@ const FindOurWorkshop = () => {
       </div>
 
       {/* Bottom Section: Getting Here */}
-      <div className="mt-12 bg-white p-6 rounded-lg shadow-lg">
-        <h3 className="text-xl font-semibold mb-4">Getting Here</h3>
-        <ul className="list-none space-y-3">
+      <div className="mt-12 bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg transition-colors duration-300">
+        <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
+          Getting Here
+        </h3>
+        <ul className="list-none space-y-3 text-gray-700 dark:text-gray-300">
           <li>
             <strong>By Car:</strong> Easy access from A57, A61, and M1
           </li>
