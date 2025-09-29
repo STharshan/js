@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiCheckCircle } from 'react-icons/fi';
 
 const ServiceServiceInfo = () => {
   // iOS Safari hack to trigger :active styles
@@ -35,20 +36,7 @@ const ServiceServiceInfo = () => {
               "Detailed service report with recommendations",
             ].map((item, idx) => (
               <li key={idx} className="flex items-center space-x-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-teal-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
+                <FiCheckCircle className="h-6 w-6 text-teal-500 dark:text-teal-400" />
                 <span>{item}</span>
               </li>
             ))}
@@ -82,20 +70,7 @@ const ServiceServiceInfo = () => {
               "Competitive pricing",
             ].map((item, idx) => (
               <li key={idx} className="flex items-center space-x-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-orange-500"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
+                <FiCheckCircle className="h-6 w-6 text-orange-500 dark:text-orange-400" />
                 <span>{item}</span>
               </li>
             ))}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiCheckCircle } from 'react-icons/fi';
 
 const MotServiceInfo = () => {
   return (
@@ -29,20 +30,7 @@ const MotServiceInfo = () => {
                 key={idx}
                 className="flex items-center space-x-2 text-gray-700 dark:text-gray-200"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-teal-500 dark:text-teal-400 flex-shrink-0"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
+                <FiCheckCircle className="h-6 w-6 text-teal-500 dark:text-teal-400 flex-shrink-0" />
                 <span>{item}</span>
               </li>
             ))}
@@ -74,20 +62,7 @@ const MotServiceInfo = () => {
                 key={idx}
                 className="flex items-center space-x-2 text-gray-700 dark:text-gray-200"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-orange-500 dark:text-orange-400 flex-shrink-0"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
+                <FiCheckCircle className="h-6 w-6 text-orange-500 dark:text-orange-400 flex-shrink-0" />
                 <span>{item}</span>
               </li>
             ))}

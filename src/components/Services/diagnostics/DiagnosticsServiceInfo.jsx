@@ -1,9 +1,11 @@
 import React from 'react';
+import { FiCheckCircle } from 'react-icons/fi';
 
 const DiagnosticsServiceInfo = () => {
   return (
     <section className="w-full px-6 sm:px-10 lg:px-18 py-16 bg-white dark:bg-[#0B1120] transition-colors duration-300">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
+        
         {/* What's Included Section */}
         <div
           className="bg-white dark:bg-[#1E293B] p-8 rounded-xl shadow-md
@@ -24,20 +26,7 @@ const DiagnosticsServiceInfo = () => {
               "Repair recommendations and quotes",
             ].map((item, i) => (
               <li key={i} className="flex items-center space-x-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-teal-500 flex-shrink-0"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
+                <FiCheckCircle className="h-6 w-6 text-teal-500 dark:text-teal-400 flex-shrink-0" />
                 <span>{item}</span>
               </li>
             ))}
@@ -64,20 +53,7 @@ const DiagnosticsServiceInfo = () => {
               "Competitive diagnostic fees",
             ].map((item, i) => (
               <li key={i} className="flex items-center space-x-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-orange-400 flex-shrink-0"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
+                <FiCheckCircle className="h-6 w-6 text-orange-500 dark:text-orange-400 flex-shrink-0" />
                 <span>{item}</span>
               </li>
             ))}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiCheckCircle } from 'react-icons/fi';
 
 const BrakeServiceInfo = () => {
   const touchStart = () => {};
@@ -22,7 +23,7 @@ const BrakeServiceInfo = () => {
                      bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
         >
           <h2 className="text-2xl font-semibold mb-6">What's Included</h2>
-          <ul className="list-none space-y-3 text-gray-700 dark:text-gray-300">
+          <ul className="list-none space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
             {[
               "Comprehensive brake system inspection",
               "Quality brake pads or discs fitted",
@@ -32,21 +33,8 @@ const BrakeServiceInfo = () => {
               "Safety certificate upon completion",
             ].map((item, i) => (
               <li key={i} className="flex items-center space-x-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-teal-500 flex-shrink-0"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-                <span>{item}</span>
+                <FiCheckCircle className="h-6 w-6 text-teal-500 dark:text-teal-400 flex-shrink-0" />
+                <span className="text-base">{item}</span>
               </li>
             ))}
           </ul>
@@ -65,7 +53,7 @@ const BrakeServiceInfo = () => {
                      bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
         >
           <h2 className="text-2xl font-semibold mb-6">Why Choose Our Service</h2>
-          <ul className="list-none space-y-3 text-gray-700 dark:text-gray-300">
+          <ul className="list-none space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
             {[
               "Premium quality brake components",
               "Expert brake technicians",
@@ -75,21 +63,8 @@ const BrakeServiceInfo = () => {
               "Emergency brake repairs",
             ].map((item, i) => (
               <li key={i} className="flex items-center space-x-3">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6 text-orange-500 flex-shrink-0"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-                <span>{item}</span>
+                <FiCheckCircle className="h-6 w-6 text-orange-500 dark:text-orange-400 flex-shrink-0" />
+                <span className="text-base">{item}</span>
               </li>
             ))}
           </ul>
