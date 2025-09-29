@@ -86,7 +86,7 @@ const HeroSection = () => {
                     Open Mon-Fri
                   </p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    8:00 AM - 6:00 PM
+                    8:00 AM - 5:00 PM
                   </p>
                 </div>
               </div>
