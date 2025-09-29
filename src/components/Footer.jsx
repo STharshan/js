@@ -102,7 +102,7 @@ const Footer = () => {
             <li className="flex items-start">
               <FiPhone className="mt-1 mr-2 text-teal-700 dark:text-teal-400" />
               <a href="tel:01709863222" className="hover:text-teal-500">
-                01709 863222<br />Mon-Fri: 8AM-6PM
+                01709 863222<br />Mon-Fri: 8AM-5PM
               </a>
             </li>
             <li className="flex items-start">
@@ -132,8 +132,8 @@ const Footer = () => {
             <li className="flex items-start">
               <FiClock className="mt-1 mr-2 text-teal-700 dark:text-teal-400" />
               <span>
-                Mon-Fri: 8AM-6PM<br />
-                Sat: 8AM-4PM<br />
+                Mon-Fri: 8AM-5PM<br />
+                Sat: Closed<br />
                 Sun: Closed
               </span>
             </li>
