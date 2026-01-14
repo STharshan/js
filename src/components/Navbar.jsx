@@ -57,17 +57,23 @@ const Navbar = () => {
     return () => document.removeEventListener("keydown", onKey);
   }, []);
 
+  // Close mobile menu when clicking on a link
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+    setIsServicesOpen(false);
+  };
+
   return (
-    <header className="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 shadow-md px-6 md:px-14 py-3 border-b border-gray-300 dark:border-gray-700 z-50">
-      {/* DESKTOP GRID LAYOUT */}
-      <div className="grid grid-cols-3 items-center">
-        {/* Logo */}
+    <header className="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 shadow-md px-4 sm:px-6 lg:px-14 py-3 border-b border-gray-300 dark:border-gray-700 z-50">
+      {/* DESKTOP/TABLET GRID LAYOUT */}
+      <div className="flex lg:grid lg:grid-cols-3 items-center justify-between">
+        {/* Logo - Responsive sizing */}
         <div className="flex items-center space-x-2 justify-self-start">
-          <div className="bg-teal-600 text-white rounded-lg px-3 py-1.5 text-lg font-bold">
+          <div className="bg-teal-600 text-white rounded-lg px-2 sm:px-3 py-1 sm:py-1.5 text-base sm:text-lg font-bold">
             JS
           </div>
           <div className="grid">
-            <span className="text-xl font-bold text-gray-700 dark:text-gray-200">
+            <span className="text-base sm:text-xl font-bold text-gray-700 dark:text-gray-200">
               JS Automotive
             </span>
             <span className="text-xs text-gray-500 dark:text-gray-400">
@@ -76,25 +82,40 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* CENTER NAV */}
-        <nav className="hidden md:flex justify-center space-x-8 items-center justify-self-center">
+        {/* CENTER NAV - Hidden on mobile, visible on desktop */}
+        <nav className="hidden lg:flex justify-center space-x-6 xl:space-x-8 items-center justify-self-center">
           <Link
             to="/"
-            className="text-gray-700 dark:text-gray-300 hover:text-teal-500"
+            className="text-gray-700 dark:text-gray-300 hover:text-teal-500 transition-colors"
           >
             Home
           </Link>
 
-          {/* Services */}
+          {/* Services Dropdown */}
           <div className="relative" ref={desktopWrapRef}>
             <button
               onClick={() => setIsServicesOpen((v) => !v)}
-              className="text-gray-700 dark:text-gray-300 hover:text-teal-500"
+              className="text-gray-700 dark:text-gray-300 hover:text-teal-500 transition-colors flex items-center gap-1"
             >
               Services
+              <svg
+                className={`w-4 h-4 transition-transform ${
+                  isServicesOpen ? "rotate-180" : ""
+                }`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
             </button>
             {isServicesOpen && (
-              <div className="absolute left-1/2 -translate-x-1/2 mt-2 bg-gray-200 dark:bg-gray-800 shadow-md rounded-md w-48 p-2 z-20">
+              <div className="absolute left-1/2 -translate-x-1/2 mt-2 bg-white dark:bg-gray-800 shadow-lg rounded-md w-52 p-2 z-20 border border-gray-200 dark:border-gray-700">
                 {[
                   ["mot", "MOT Testing"],
                   ["servicing", "Servicing"],
@@ -108,7 +129,8 @@ const Navbar = () => {
                   <Link
                     key={path}
                     to={`/services/${path}`}
-                    className="block text-gray-700 dark:text-gray-300 py-1 px-2 hover:bg-orange-500 rounded-lg"
+                    onClick={handleLinkClick}
+                    className="block text-gray-700 dark:text-gray-300 py-2 px-3 hover:bg-teal-500 hover:text-white rounded-lg transition-colors"
                   >
                     {label}
                   </Link>
@@ -119,129 +141,185 @@ const Navbar = () => {
 
           <Link
             to="/about"
-            className="text-gray-700 dark:text-gray-300 hover:text-teal-500"
+            className="text-gray-700 dark:text-gray-300 hover:text-teal-500 transition-colors"
           >
             About
           </Link>
           <Link
             to="/contact"
-            className="text-gray-700 dark:text-gray-300 hover:text-teal-500"
+            className="text-gray-700 dark:text-gray-300 hover:text-teal-500 transition-colors"
           >
             Contact
           </Link>
         </nav>
 
-        {/* RIGHT ACTIONS */}
-        <div className="hidden md:flex items-center space-x-4 justify-self-end">
+        {/* RIGHT ACTIONS - Responsive */}
+        <div className="hidden lg:flex items-center space-x-3 xl:space-x-4 justify-self-end">
           <FaPhoneAlt className="w-4 h-4 text-gray-700 dark:text-gray-300" />
           <a
             href="tel:+441709863222"
-            className="text-gray-700 dark:text-gray-300 hover:text-teal-500"
+            className="text-gray-700 dark:text-gray-300 hover:text-teal-500 text-sm xl:text-base transition-colors"
           >
             01709 863222
           </a>
           <Link to="/contact">
-            <button className="bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-500">
+            <button className="bg-teal-600 text-white px-3 xl:px-4 py-2 rounded-md hover:bg-teal-500 text-sm xl:text-base transition-colors">
               Get Quote
             </button>
           </Link>
           <button
             onClick={toggleTheme}
-            className="ml-2 text-gray-700 dark:text-gray-300 hover:text-teal-500"
+            className="ml-2 text-gray-700 dark:text-gray-300 hover:text-teal-500 transition-colors"
+            aria-label="Toggle theme"
           >
             {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
           </button>
         </div>
 
-        {/* MOBILE MENU BUTTON */}
-        <button
-          className="md:hidden justify-self-end text-gray-700 dark:text-gray-300 hover:text-teal-500"
-          onClick={() => setIsMenuOpen((v) => !v)}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+        {/* MOBILE/TABLET ACTIONS - Visible below lg breakpoint */}
+        <div className="flex lg:hidden items-center space-x-3">
+          <button
+            onClick={toggleTheme}
+            className="text-gray-700 dark:text-gray-300 hover:text-teal-500 transition-colors"
+            aria-label="Toggle theme"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16M4 18h16"
-            />
-          </svg>
-        </button>
+            {darkMode ? <FaSun size={18} /> : <FaMoon size={18} />}
+          </button>
+          
+          {/* MOBILE MENU BUTTON */}
+          <button
+            className="text-gray-700 dark:text-gray-300 hover:text-teal-500 transition-colors p-1"
+            onClick={() => setIsMenuOpen((v) => !v)}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
 
-      {/* MOBILE MENU */}
+      {/* MOBILE/TABLET MENU */}
       {isMenuOpen && (
-        <div className="md:hidden flex flex-col space-y-4 mt-4 bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
-          {["/", "/about", "/contact"].map((path, i) => (
-            <Link
-              key={i}
-              to={path}
-              className="text-gray-700 dark:text-gray-300 hover:text-teal-500"
-            >
-              {path === "/" ? "Home" : path.slice(1)}
-            </Link>
-          ))}
+        <div className="lg:hidden flex flex-col space-y-3 mt-4 bg-gray-100 dark:bg-gray-800 p-4 rounded-lg max-h-[calc(100vh-5rem)] overflow-y-auto">
+          <Link
+            to="/"
+            onClick={handleLinkClick}
+            className="text-gray-700 dark:text-gray-300 hover:text-teal-500 py-2 transition-colors"
+          >
+            Home
+          </Link>
 
-          {/* Mobile Services */}
+          {/* Mobile Services Dropdown */}
           <div ref={mobileWrapRef}>
             <button
               onClick={() => setIsServicesOpen((v) => !v)}
-              className="w-full text-left text-gray-700 dark:text-gray-300 hover:text-teal-500"
+              className="w-full text-left text-gray-700 dark:text-gray-300 hover:text-teal-500 py-2 flex items-center justify-between transition-colors"
             >
               Services
+              <svg
+                className={`w-4 h-4 transition-transform ${
+                  isServicesOpen ? "rotate-180" : ""
+                }`}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
             </button>
             {isServicesOpen && (
-              <div className="flex flex-col space-y-2 mt-2 bg-gray-200 dark:bg-gray-700 p-2 rounded-md">
+              <div className="flex flex-col space-y-1 mt-2 bg-gray-200 dark:bg-gray-700 p-2 rounded-md">
                 {[
-                  "mot",
-                  "servicing",
-                  "mechanical-repairs",
-                  "brake",
-                  "diagnostics",
-                  "dpf-clean",
-                  "cam-belt",
-                  "suspension",
-                ].map((item) => (
+                  ["mot", "MOT Testing"],
+                  ["servicing", "Servicing"],
+                  ["mechanical-repairs", "Mechanical Repairs"],
+                  ["brake", "Brakes"],
+                  ["diagnostics", "Diagnostics"],
+                  ["dpf-clean", "DPF Clean"],
+                  ["cam-belt", "Cam Belt"],
+                  ["suspension", "Suspension"],
+                ].map(([path, label]) => (
                   <Link
-                    key={item}
-                    to={`/services/${item}`}
-                    className="block text-gray-700 dark:text-gray-300 py-1 px-2 hover:bg-orange-500 rounded-lg"
+                    key={path}
+                    to={`/services/${path}`}
+                    onClick={handleLinkClick}
+                    className="block text-gray-700 dark:text-gray-300 py-2 px-3 hover:bg-teal-500 hover:text-white rounded-lg transition-colors"
                   >
-                    {item.replace("-", " ").toUpperCase()}
+                    {label}
                   </Link>
                 ))}
               </div>
             )}
           </div>
 
-          <div className="flex items-center space-x-2">
-            <FaPhoneAlt className="w-4 h-4 text-gray-700 dark:text-gray-300" />
-            <a
-              href="tel:+441709863222"
-              className="text-gray-700 dark:text-gray-300 hover:text-teal-500"
-            >
-              01709 863222
-            </a>
-          </div>
-
-          <Link to="/contact">
-            <button className="bg-teal-600 text-white px-4 py-2 rounded-md w-full hover:bg-teal-500">
-              Get Quote
-            </button>
+          <Link
+            to="/about"
+            onClick={handleLinkClick}
+            className="text-gray-700 dark:text-gray-300 hover:text-teal-500 py-2 transition-colors"
+          >
+            About
           </Link>
 
-          <button
-            onClick={toggleTheme}
-            className="self-start text-gray-700 dark:text-gray-300 hover:text-teal-500"
+          <Link
+            to="/contact"
+            onClick={handleLinkClick}
+            className="text-gray-700 dark:text-gray-300 hover:text-teal-500 py-2 transition-colors"
           >
-            {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
-          </button>
+            Contact
+          </Link>
+
+          {/* Phone and CTA in mobile menu */}
+          <div className="pt-3 border-t border-gray-300 dark:border-gray-600">
+            <div className="flex items-center space-x-2 mb-3">
+              <FaPhoneAlt className="w-4 h-4 text-gray-700 dark:text-gray-300" />
+              <a
+                href="tel:+441709863222"
+                className="text-gray-700 dark:text-gray-300 hover:text-teal-500 transition-colors"
+              >
+                01709 863222
+              </a>
+            </div>
+
+            <Link to="/contact" onClick={handleLinkClick}>
+              <button className="bg-teal-600 text-white px-4 py-2.5 rounded-md w-full hover:bg-teal-500 transition-colors font-medium">
+                Get Quote
+              </button>
+            </Link>
+          </div>
         </div>
       )}
     </header>
