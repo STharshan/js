@@ -32,18 +32,10 @@ const testimonials = [
     rating: 5,
   },
   {
-    name: "David Pryse",
-    service: "Brake Service",
-    feedback: `Was a pleasure to meet this young man, He managed to fit us in to his busy schedule.
-               Delighted with his workmanship, above and beyond with helpfulness.
-               And a very reasonable costing, would definitely recommend 👍`,
-    rating: 5,
-  },
-  {
     name: "Katelynne Jane Williams",
     service: "Suspension Repair",
     feedback:
-      "Joe looked at what was wrong with my car (lock on my boot). He sourced my part and then fitted it. He wouldn’t accept payment until he knew the completed works were to my satisfaction. Thank you Joe.",
+      "Joe looked at what was wrong with my car (lock on my boot). He sourced my part and then fitted it. Thank you Joe.",
     rating: 5,
   },
   {
@@ -69,6 +61,7 @@ const Testimonials = () => {
         >
           What Our Customers Say
         </h2>
+
         <p
           className="text-xl max-w-4xl mx-auto font-semibold text-gray-800 dark:text-gray-300 mb-12"
           data-aos="fade-up"
@@ -78,7 +71,7 @@ const Testimonials = () => {
           have to say about our automotive services.
         </p>
 
-        {/* Swiper Slider */}
+        {/* Swiper */}
         <Swiper
           modules={[Pagination, Navigation, Autoplay]}
           spaceBetween={30}
@@ -91,24 +84,24 @@ const Testimonials = () => {
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-          className="pb-12"
         >
           {testimonials.map((testimonial, index) => (
-            <SwiperSlide key={index} className="h-full">
+            <SwiperSlide key={index} className="flex py-20">
               <div
                 data-aos={index % 2 === 0 ? "fade-up" : "fade-down"}
                 data-aos-delay={index * 100}
                 className="
-                  bg-white dark:bg-gray-800 
-                  h-full min-h-[350px] flex flex-col justify-between
-                  p-6 rounded-xl border border-gray-300 dark:border-gray-700 shadow-md
-                  transform transition duration-300
+                  bg-white dark:bg-gray-800
+                  h-[300px]
+                  w-full flex flex-col
+                  p-6 rounded-xl
+                  border border-gray-300 dark:border-gray-700
+                  shadow-md transition duration-300
                   hover:shadow-[0_0_25px_#00BFA5] hover:scale-105
-                  active:shadow-[0_0_25px_#00BFA5]
                 "
               >
-                {/* Stars & Quote */}
-                <div>
+                {/* Content */}
+                <div className="flex-1">
                   <div className="flex justify-between items-start mb-4">
                     <div className="text-orange-500">
                       {Array.from({ length: testimonial.rating }).map(
@@ -119,21 +112,19 @@ const Testimonials = () => {
                         )
                       )}
                     </div>
-                    <div className="ml-auto text-xl text-gray-400 dark:text-gray-500">
-                      <FaQuoteRight />
-                    </div>
+                    <FaQuoteRight className="text-xl text-gray-400 dark:text-gray-500" />
                   </div>
 
                   {/* Feedback */}
-                  <p className="text-lg text-gray-700 dark:text-gray-300 mb-4 text-left">
+                  <p className="text-lg text-gray-700 dark:text-gray-300 text-left line-clamp-4">
                     "{testimonial.feedback}"
                   </p>
                 </div>
 
-                {/* Footer (divider + name) */}
-                <div>
+                {/* Footer */}
+                <div className="pt-6">
                   <hr className="mb-4 border-gray-300 dark:border-gray-600" />
-                  <p className="text-left font-semibold text-gray-900 dark:text-gray-100">
+                  <p className="font-semibold text-gray-900 dark:text-gray-100 text-left">
                     {testimonial.name}
                   </p>
                 </div>
@@ -142,12 +133,13 @@ const Testimonials = () => {
           ))}
         </Swiper>
 
-        {/* Overall Rating Badge */}
+        {/* Overall Rating */}
         <div
-          className="flex items-center gap-4 bg-orange-100 dark:bg-orange-900/40 border border-gray-300 dark:border-gray-600 px-6 py-2 rounded-full max-w-90 mx-auto mt-8"
+          className="flex items-center gap-4 bg-orange-100 dark:bg-orange-900/40
+          border border-gray-300 dark:border-gray-600
+          px-6 py-2 rounded-full max-w-fit mx-auto mt-10"
           data-aos="zoom-in"
         >
-          {/* Stars */}
           <div className="flex text-orange-500 text-2xl space-x-1">
             <span>★</span>
             <span>★</span>
@@ -155,22 +147,22 @@ const Testimonials = () => {
             <span>★</span>
             <span>★</span>
           </div>
-          {/* Score */}
-          <span className="text-sm mt-1 text-gray-800 dark:text-gray-200">
+
+          <span className="text-sm text-gray-800 dark:text-gray-200">
             4.9/5
           </span>
-          {/* Reviews */}
-          <span className="text-sm mt-1 text-gray-700 dark:text-gray-300">
+
+          <span className="text-sm text-gray-700 dark:text-gray-300">
             from 500+ reviews
           </span>
         </div>
       </div>
 
-      {/* Swiper arrow color override */}
+      {/* Swiper arrow color */}
       <style jsx global>{`
         .swiper-button-next,
         .swiper-button-prev {
-          color: #000 !important; /* black arrows */
+          color: #000 !important;
         }
       `}</style>
     </section>
