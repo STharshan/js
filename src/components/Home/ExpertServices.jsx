@@ -70,9 +70,9 @@ const ExpertServices = () => {
               <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2">
                 {service.name}
               </h3>
-              <p className="text-lg font-semibold text-orange-500">
+              {/* <p className="text-lg font-semibold text-orange-500">
                 {service.price}
-              </p>
+              </p> */}
 
               {/* Description expands to push button down */}
               <p className="text-gray-500 dark:text-gray-400 mb-4 mt-5 flex-grow">
@@ -93,7 +93,7 @@ const ExpertServices = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-8" data-aos="zoom-in">
+        <div className="text-center mt-15" data-aos="zoom-in">
           <Link
             to="/contact"
             className="bg-teal-600 text-white px-6 py-2 rounded-md hover:bg-teal-500 transition duration-300"
