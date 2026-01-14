@@ -32,17 +32,16 @@ const Navbar = () => {
     }
   };
 
-  // Close "Services" if clicking outside both wrappers
+  // Close Services on outside click
   useEffect(() => {
     const handleOutside = (e) => {
       const wrappers = [desktopWrapRef.current, mobileWrapRef.current];
-      const clickedInside = wrappers.some((el) => el && el.contains(e.target));
-      if (!clickedInside) setIsServicesOpen(false);
+      if (!wrappers.some((el) => el && el.contains(e.target))) {
+        setIsServicesOpen(false);
+      }
     };
-
     document.addEventListener("mousedown", handleOutside);
     document.addEventListener("touchstart", handleOutside, { passive: true });
-
     return () => {
       document.removeEventListener("mousedown", handleOutside);
       document.removeEventListener("touchstart", handleOutside);
@@ -60,9 +59,10 @@ const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 shadow-md px-6 md:px-14 py-3 border-b border-gray-300 dark:border-gray-700 z-50">
-      <div className="flex justify-between items-center">
-        {/* Logo Section */}
-        <div className="flex items-center space-x-2">
+      {/* DESKTOP GRID LAYOUT */}
+      <div className="grid grid-cols-3 items-center">
+        {/* Logo */}
+        <div className="flex items-center space-x-2 justify-self-start">
           <div className="bg-teal-600 text-white rounded-lg px-3 py-1.5 text-lg font-bold">
             JS
           </div>
@@ -76,8 +76,8 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Navbar for Desktop */}
-        <nav className="hidden md:flex space-x-8 items-center">
+        {/* CENTER NAV */}
+        <nav className="hidden md:flex justify-center space-x-8 items-center justify-self-center">
           <Link
             to="/"
             className="text-gray-700 dark:text-gray-300 hover:text-teal-500"
@@ -85,65 +85,34 @@ const Navbar = () => {
             Home
           </Link>
 
-          {/* Services Dropdown */}
+          {/* Services */}
           <div className="relative" ref={desktopWrapRef}>
             <button
               onClick={() => setIsServicesOpen((v) => !v)}
               className="text-gray-700 dark:text-gray-300 hover:text-teal-500"
-              aria-expanded={isServicesOpen}
             >
               Services
             </button>
             {isServicesOpen && (
-              <div className="absolute left-0 mt-2 bg-gray-200 dark:bg-gray-800 shadow-md rounded-md w-48 p-2 z-20">
-                <Link
-                  to="/services/mot"
-                  className="block text-gray-700 dark:text-gray-300 py-1 px-2 hover:bg-orange-500 rounded-lg"
-                >
-                  MOT Testing
-                </Link>
-                <Link
-                  to="/services/servicing"
-                  className="block text-gray-700 dark:text-gray-300 py-1 px-2 hover:bg-orange-500 rounded-lg"
-                >
-                  Servicing
-                </Link>
-                <Link
-                  to="/services/mechanical-repairs"
-                  className="block text-gray-700 dark:text-gray-300 py-1 px-2 hover:bg-orange-500 rounded-lg"
-                >
-                  Mechanical Repairs
-                </Link>
-                <Link
-                  to="/services/brake"
-                  className="block text-gray-700 dark:text-gray-300 py-1 px-2 hover:bg-orange-500 rounded-lg"
-                >
-                  Brakes
-                </Link>
-                <Link
-                  to="/services/diagnostics"
-                  className="block text-gray-700 dark:text-gray-300 py-1 px-2 hover:bg-orange-500 rounded-lg"
-                >
-                  Diagnostics
-                </Link>
-                <Link
-                  to="/services/dpf-clean"
-                  className="block text-gray-700 dark:text-gray-300 py-1 px-2 hover:bg-orange-500 rounded-lg"
-                >
-                  DPF Clean
-                </Link>
-                <Link
-                  to="/services/cam-belt"
-                  className="block text-gray-700 dark:text-gray-300 py-1 px-2 hover:bg-orange-500 rounded-lg"
-                >
-                  Cam Belt
-                </Link>
-                <Link
-                  to="/services/suspension"
-                  className="block text-gray-700 dark:text-gray-300 py-1 px-2 hover:bg-orange-500 rounded-lg"
-                >
-                  Suspension
-                </Link>
+              <div className="absolute left-1/2 -translate-x-1/2 mt-2 bg-gray-200 dark:bg-gray-800 shadow-md rounded-md w-48 p-2 z-20">
+                {[
+                  ["mot", "MOT Testing"],
+                  ["servicing", "Servicing"],
+                  ["mechanical-repairs", "Mechanical Repairs"],
+                  ["brake", "Brakes"],
+                  ["diagnostics", "Diagnostics"],
+                  ["dpf-clean", "DPF Clean"],
+                  ["cam-belt", "Cam Belt"],
+                  ["suspension", "Suspension"],
+                ].map(([path, label]) => (
+                  <Link
+                    key={path}
+                    to={`/services/${path}`}
+                    className="block text-gray-700 dark:text-gray-300 py-1 px-2 hover:bg-orange-500 rounded-lg"
+                  >
+                    {label}
+                  </Link>
+                ))}
               </div>
             )}
           </div>
@@ -160,37 +129,34 @@ const Navbar = () => {
           >
             Contact
           </Link>
+        </nav>
 
-          {/* Phone + Get Quote */}
-          <div className="flex items-center space-x-3">
-            <FaPhoneAlt className="w-4 h-4 text-gray-700 dark:text-gray-300" />
-            <a
-              href="tel:+441709863222"
-              className="text-gray-700 dark:text-gray-300 hover:text-teal-500 cursor-pointer"
-            >
-              01709 863222
-            </a>
-            <Link to="/contact">
-              <button className="bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-500">
-                Get Quote
-              </button>
-            </Link>
-          </div>
-
-          {/* Dark/Light Toggle at the very end */}
+        {/* RIGHT ACTIONS */}
+        <div className="hidden md:flex items-center space-x-4 justify-self-end">
+          <FaPhoneAlt className="w-4 h-4 text-gray-700 dark:text-gray-300" />
+          <a
+            href="tel:+441709863222"
+            className="text-gray-700 dark:text-gray-300 hover:text-teal-500"
+          >
+            01709 863222
+          </a>
+          <Link to="/contact">
+            <button className="bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-500">
+              Get Quote
+            </button>
+          </Link>
           <button
             onClick={toggleTheme}
-            className="ml-4 text-gray-700 dark:text-gray-300 hover:text-teal-500"
+            className="ml-2 text-gray-700 dark:text-gray-300 hover:text-teal-500"
           >
             {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
           </button>
-        </nav>
+        </div>
 
-        {/* Mobile Menu Icon */}
+        {/* MOBILE MENU BUTTON */}
         <button
-          className="md:hidden text-gray-700 dark:text-gray-300 hover:text-teal-500"
+          className="md:hidden justify-self-end text-gray-700 dark:text-gray-300 hover:text-teal-500"
           onClick={() => setIsMenuOpen((v) => !v)}
-          aria-expanded={isMenuOpen}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -204,119 +170,75 @@ const Navbar = () => {
               strokeLinejoin="round"
               strokeWidth="2"
               d="M4 6h16M4 12h16M4 18h16"
-            ></path>
+            />
           </svg>
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* MOBILE MENU */}
       {isMenuOpen && (
         <div className="md:hidden flex flex-col space-y-4 mt-4 bg-gray-100 dark:bg-gray-800 p-4 rounded-lg">
-          <Link
-            to="/"
-            className="text-gray-700 dark:text-gray-300 hover:text-teal-500"
-          >
-            Home
-          </Link>
+          {["/", "/about", "/contact"].map((path, i) => (
+            <Link
+              key={i}
+              to={path}
+              className="text-gray-700 dark:text-gray-300 hover:text-teal-500"
+            >
+              {path === "/" ? "Home" : path.slice(1)}
+            </Link>
+          ))}
 
-          {/* Services Dropdown */}
-          <div className="relative" ref={mobileWrapRef}>
+          {/* Mobile Services */}
+          <div ref={mobileWrapRef}>
             <button
               onClick={() => setIsServicesOpen((v) => !v)}
               className="w-full text-left text-gray-700 dark:text-gray-300 hover:text-teal-500"
-              aria-expanded={isServicesOpen}
             >
               Services
             </button>
             {isServicesOpen && (
               <div className="flex flex-col space-y-2 mt-2 bg-gray-200 dark:bg-gray-700 p-2 rounded-md">
-                <Link
-                  to="/services/mot"
-                  className="block text-gray-700 dark:text-gray-300 py-1 px-2 hover:bg-orange-500 rounded-lg"
-                >
-                  MOT Testing
-                </Link>
-                <Link
-                  to="/services/servicing"
-                  className="block text-gray-700 dark:text-gray-300 py-1 px-2 hover:bg-orange-500 rounded-lg"
-                >
-                  Servicing
-                </Link>
-                <Link
-                  to="/services/mechanical-repairs"
-                  className="block text-gray-700 dark:text-gray-300 py-1 px-2 hover:bg-orange-500 rounded-lg"
-                >
-                  Mechanical Repairs
-                </Link>
-                <Link
-                  to="/services/brake"
-                  className="block text-gray-700 dark:text-gray-300 py-1 px-2 hover:bg-orange-500 rounded-lg"
-                >
-                  Brakes
-                </Link>
-                <Link
-                  to="/services/diagnostics"
-                  className="block text-gray-700 dark:text-gray-300 py-1 px-2 hover:bg-orange-500 rounded-lg"
-                >
-                  Diagnostics
-                </Link>
-                <Link
-                  to="/services/dpf-clean"
-                  className="block text-gray-700 dark:text-gray-300 py-1 px-2 hover:bg-orange-500 rounded-lg"
-                >
-                  DPF Clean
-                </Link>
-                <Link
-                  to="/services/cam-belt"
-                  className="block text-gray-700 dark:text-gray-300 py-1 px-2 hover:bg-orange-500 rounded-lg"
-                >
-                  Cam Belt
-                </Link>
-                <Link
-                  to="/services/suspension"
-                  className="block text-gray-700 dark:text-gray-300 py-1 px-2 hover:bg-orange-500 rounded-lg"
-                >
-                  Suspension
-                </Link>
+                {[
+                  "mot",
+                  "servicing",
+                  "mechanical-repairs",
+                  "brake",
+                  "diagnostics",
+                  "dpf-clean",
+                  "cam-belt",
+                  "suspension",
+                ].map((item) => (
+                  <Link
+                    key={item}
+                    to={`/services/${item}`}
+                    className="block text-gray-700 dark:text-gray-300 py-1 px-2 hover:bg-orange-500 rounded-lg"
+                  >
+                    {item.replace("-", " ").toUpperCase()}
+                  </Link>
+                ))}
               </div>
             )}
           </div>
 
-          <Link
-            to="/about"
-            className="text-gray-700 dark:text-gray-300 hover:text-teal-500"
-          >
-            About
-          </Link>
-          <Link
-            to="/contact"
-            className="text-gray-700 dark:text-gray-300 hover:text-teal-500"
-          >
-            Contact
-          </Link>
-
-          {/* Phone */}
           <div className="flex items-center space-x-2">
             <FaPhoneAlt className="w-4 h-4 text-gray-700 dark:text-gray-300" />
             <a
               href="tel:+441709863222"
-              className="text-gray-700 dark:text-gray-300 hover:text-teal-500 cursor-pointer"
+              className="text-gray-700 dark:text-gray-300 hover:text-teal-500"
             >
               01709 863222
             </a>
           </div>
 
-          {/* Get Quote */}
           <Link to="/contact">
-            <button className="bg-teal-600 text-white px-4 py-2 rounded-md hover:bg-teal-500 w-full">
+            <button className="bg-teal-600 text-white px-4 py-2 rounded-md w-full hover:bg-teal-500">
               Get Quote
             </button>
           </Link>
 
-          {/* Dark/Light Toggle */}
           <button
             onClick={toggleTheme}
-            className="mt-2 self-start text-gray-700 dark:text-gray-300 hover:text-teal-500"
+            className="self-start text-gray-700 dark:text-gray-300 hover:text-teal-500"
           >
             {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
           </button>

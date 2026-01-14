@@ -45,6 +45,42 @@ const testimonials = [
       "Absolutely fantastic service would definitely recommend, great value and professional service , will be using Joe again 100%",
     rating: 5,
   },
+  {
+    name: "smithypeart1",
+    service: "General Repairs",
+    feedback:
+      "First time dealing with this garage as I am new around here and wasn't disappointed,I had to get them to come to me as well,which was very handy.They were friendly,helpful,and got the job done in time, will be going back there in the future 👍",
+    rating: 5,
+  },
+  {
+    name: "Melbourne Raceway Drag Racing UK",
+    service: "General Repairs",
+    feedback:
+      "On 2 occasions had an emergency breakdown and thanks to Joe he got it sorted quickly for us. Thankyou",
+    rating: 5,
+  },
+  {
+    name: "Donny Diners Club",
+    service: "General Repairs",
+    feedback:
+      "Absolute top class service from Joe and his team, cannot thank him enough. 👏",
+    rating: 5,
+  },
+  {
+    name: "Mbuzi Yanga",
+    service: "General Repairs",
+    feedback:
+      "The customer service from JS automotive team is exceptional . And will always recommend these nice people . Car fixed in time and was well informed of the development . Thank you.",
+    rating: 5,
+  },
+  {
+    name: "Josh Sills",
+    service: "General Repairs",
+    feedback:
+      "amazing service but then it comes at no supprise joe is a fantastic very knowledgable lad and as fair as they come did a cracking job on my audi a5 thankyou joe your a legend 😎👌",
+    rating: 5,
+  },
+
 ];
 
 const Testimonials = () => {
@@ -149,11 +185,11 @@ const Testimonials = () => {
           </div>
 
           <span className="text-sm text-gray-800 dark:text-gray-200">
-            4.9/5
+            5/5
           </span>
 
           <span className="text-sm text-gray-700 dark:text-gray-300">
-            from 500+ reviews
+            from 33 reviews
           </span>
         </div>
       </div>

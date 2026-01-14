@@ -13,6 +13,9 @@ import DPF from "./pages/DPF";
 import Mechanical from "./pages/Mechanical";
 import Servicing from "./pages/Servicing";
 import Suspension from "./pages/Suspension";
+import TermsConditions from "./components/Term";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import GDPRConsent from "./components/GDPRButton";
 
 function App() {
   return (
@@ -31,8 +34,11 @@ function App() {
         <Route path="/services/servicing" element={<Servicing />} />
         <Route path="/services/suspension" element={<Suspension />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/terms" element={<TermsConditions />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
+      <GDPRConsent />
     </Router>
   );
 }

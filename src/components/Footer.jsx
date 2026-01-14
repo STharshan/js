@@ -33,12 +33,9 @@ const Footer = () => {
             >
               <FaFacebookF className="hover:text-blue-700" />
             </a>
-            <a href="#">
-              <FaTwitter className="hover:text-blue-400" />
-            </a>
-            <a href="#">
+            {/* <a href="#">
               <FaInstagram className="hover:text-pink-500" />
-            </a>
+            </a> */}
           </div>
         </div>
 
@@ -101,7 +98,7 @@ const Footer = () => {
           <ul className="space-y-3 text-sm">
             <li className="flex items-start">
               <FiPhone className="mt-1 mr-2 text-teal-700 dark:text-teal-400" />
-              <a href="tel:01709863222" className="hover:text-teal-500">
+              <a href="tel:+441709863222" className="hover:text-teal-500">
                 01709 863222<br />
               </a>
             </li>
@@ -132,8 +129,9 @@ const Footer = () => {
             <li className="flex items-start">
               <FiClock className="mt-1 mr-2 text-teal-700 dark:text-teal-400" />
               <span>
-                Mon-Fri: 8AM-5PM<br />
-                Sat: Closed<br />
+                Mon-Wed: 8AM-5PM<br />
+                Thu: 8AM-5:30PM <br />
+                Sat: 8AM-2PM<br />
                 Sun: Closed
               </span>
             </li>
@@ -160,7 +158,6 @@ const Footer = () => {
           <div className="flex space-x-6 mt-2 md:mt-0">
             <Link to="/privacy" className="hover:text-teal-500">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-teal-500">Terms of Service</Link>
-            <Link to="/complaints" className="hover:text-teal-500">Complaints</Link>
           </div>
         </div>
       </div>

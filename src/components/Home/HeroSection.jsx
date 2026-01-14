@@ -20,7 +20,7 @@ const HeroSection = () => {
             className="space-y-8 text-center lg:text-left"
             data-aos="fade-right"
           >
-            <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-gray-900 dark:text-gray-100">
+            <h1 className="text-4xl lg:text-6xl font-bold mt-10 leading-tight text-gray-900 dark:text-gray-100">
               Professional{" "}
               <span className="text-teal-600 dark:text-teal-400">
                 Automotive Services
@@ -44,9 +44,9 @@ const HeroSection = () => {
               data-aos-delay="300"
             >
               <span className="text-orange-500 text-2xl">★★★★★</span>
-              <p className="text-gray-600 dark:text-gray-300">4.9/5 Rating</p>
+              <p className="text-gray-600 dark:text-gray-300">5/5 Rating</p>
               <p className="text-gray-600 dark:text-gray-300">
-                500+ Happy Customers
+                33 Happy Customers
               </p>
             </div>
 
