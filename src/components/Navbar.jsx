@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
-import { FaPhoneAlt, FaSun, FaMoon } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,18 +20,6 @@ const Navbar = () => {
     }
   }, []);
 
-  // Toggle theme
-  const toggleTheme = () => {
-    if (darkMode) {
-      document.documentElement.classList.remove("dark");
-      localStorage.setItem("theme", "light");
-      setDarkMode(false);
-    } else {
-      document.documentElement.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-      setDarkMode(true);
-    }
-  };
 
   // Close Services on outside click
   useEffect(() => {
@@ -99,9 +88,8 @@ const Navbar = () => {
             >
               Services
               <svg
-                className={`w-4 h-4 transition-transform ${
-                  isServicesOpen ? "rotate-180" : ""
-                }`}
+                className={`w-4 h-4 transition-transform ${isServicesOpen ? "rotate-180" : ""
+                  }`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -167,25 +155,13 @@ const Navbar = () => {
               Get Quote
             </button>
           </Link>
-          <button
-            onClick={toggleTheme}
-            className="ml-2 text-gray-700 dark:text-gray-300 hover:text-teal-500 transition-colors"
-            aria-label="Toggle theme"
-          >
-            {darkMode ? <FaSun size={20} /> : <FaMoon size={20} />}
-          </button>
+          <ThemeToggle />
         </div>
 
         {/* MOBILE/TABLET ACTIONS - Visible below lg breakpoint */}
         <div className="flex lg:hidden items-center space-x-3">
-          <button
-            onClick={toggleTheme}
-            className="text-gray-700 dark:text-gray-300 hover:text-teal-500 transition-colors"
-            aria-label="Toggle theme"
-          >
-            {darkMode ? <FaSun size={18} /> : <FaMoon size={18} />}
-          </button>
-          
+          <ThemeToggle />
+
           {/* MOBILE MENU BUTTON */}
           <button
             className="text-gray-700 dark:text-gray-300 hover:text-teal-500 transition-colors p-1"
@@ -246,9 +222,8 @@ const Navbar = () => {
             >
               Services
               <svg
-                className={`w-4 h-4 transition-transform ${
-                  isServicesOpen ? "rotate-180" : ""
-                }`}
+                className={`w-4 h-4 transition-transform ${isServicesOpen ? "rotate-180" : ""
+                  }`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
