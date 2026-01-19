@@ -99,7 +99,7 @@ const Footer = () => {
             <li className="flex items-start">
               <FiPhone className="mt-1 mr-2 text-teal-700 dark:text-teal-400" />
               <a href="tel:+441709863222" className="hover:text-teal-500">
-                01709 863222<br />
+                +44 1709 863222<br />
               </a>
             </li>
             <li className="flex items-start">
@@ -116,7 +116,7 @@ const Footer = () => {
             <li className="flex items-start">
               <FiMapPin className="mt-1 mr-2 text-teal-700 dark:text-teal-400" />
               <a
-                href="https://www.google.com/maps?q=New+Edlington,+Doncaster+DN12+1DJ,+United+Kingdom"
+                href="https://maps.app.goo.gl/me2GLeqXUvnRav5v8"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-teal-500"
@@ -131,6 +131,7 @@ const Footer = () => {
               <span>
                 Mon-Wed: 8AM-5PM<br />
                 Thu: 8AM-5:30PM <br />
+                Fri: 8AM-5PM <br />
                 Sat: 8AM-2PM<br />
                 Sun: Closed
               </span>

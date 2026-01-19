@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const MotServices = () => {
   return (
-    <div className="container mx-auto px-6 sm:px-8 lg:px-18 py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div className="px-6 sm:px-8 lg:px-18 py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <h2 className="text-3xl font-semibold text-center mb-8 text-gray-900 dark:text-gray-100">
         Related Services
       </h2>

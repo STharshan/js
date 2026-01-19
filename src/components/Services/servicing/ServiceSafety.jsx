@@ -46,7 +46,7 @@ const ServiceSafety = () => {
   ];
 
   return (
-    <section className="container mx-auto px-6 sm:px-8 lg:px-12 py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <section className=" px-6 sm:px-8 lg:px-12 py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <h2 className="text-4xl font-semibold text-center mb-6 text-gray-900 dark:text-white transition-colors duration-300">
         Service Intervals
       </h2>

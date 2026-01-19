@@ -12,7 +12,7 @@ const MechanicalServices = () => {
   ];
 
   return (
-    <section className="container mx-auto px-6 sm:px-8 lg:px-12 py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
+    <section className="  px-6 sm:px-8 lg:px-12 py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
       <h2 className="text-3xl font-semibold text-center mb-12 text-gray-900 dark:text-white transition-colors duration-300">
         Related Services
       </h2>

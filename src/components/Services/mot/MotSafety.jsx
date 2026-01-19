@@ -6,8 +6,8 @@ const MotSafety = () => {
   const touchStart = () => {};
 
   return (
-    <section className="min-h-screen flex flex-col items-center py-16 px-6 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
-      <div className="w-full max-w-6xl rounded-lg">
+    <section className="min-h-screen flex flex-col items-center px-6 sm:px-8 lg:px-18 py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <div className="rounded-lg">
         {/* Title */}
         <h1 className="text-4xl font-bold text-center text-gray-900 dark:text-gray-100 mb-6">
           MOT Test Information

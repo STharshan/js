@@ -30,11 +30,15 @@ const VisitWorkshop = () => {
                 Opening Hours
               </h3>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                Monday - Friday: 8:00 AM - 6:00 PM
+                Mon-Wed: 8AM-5PM
                 <br />
-                Saturday: 8:00 AM - 4:00 PM
+                Thu: 8AM-5:30PM
                 <br />
-                Sunday: Closed
+                Fri: 8AM-5PM
+                <br />
+                Sat: 8AM-2PM
+                <br />
+                Sun: Closed
               </p>
             </div>
 
@@ -43,20 +47,24 @@ const VisitWorkshop = () => {
                 Contact Information
               </h3>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                Phone: 01709 863222
+                Phone: +44 1709 863222
                 <br />
                 Email: Js.automotive1@outlook.com
               </p>
             </div>
           </div>
 
-          {/* Right Side - Image/Map */}
-          <div className="bg-gray-200 dark:bg-gray-700 h-60 rounded-md overflow-hidden shadow-md">
-            <img
-              src="empty1.svg"
-              alt="Workshop Location"
-              className="w-full h-full object-cover"
-            />
+          {/* Right Side - Embedded Google Map */}
+          <div className="h-95 w-full rounded-md overflow-hidden shadow-md">
+            <iframe
+              title="Workshop Location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.2580400980796!2d-1.1910733!3d53.4817191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48e8ba4f0f5f8737%3A0x8c8d65d416363105!2sJS%20AUTOMOTIVE%20MOT%20AND%20SERVICE%20CENTER!5e0!3m2!1sen!2slk!4v1768845215553!5m2!1sen!2slk"
+              loading="lazy"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ const BrakeSafety = () => {
 
   return (
     <section
-      className="container mx-auto px-6 sm:px-8 lg:px-18 py-16
+      className=" px-6 sm:px-8 lg:px-18 py-16
                  bg-white dark:bg-[#0E1625] transition-colors duration-300"
     >
       {/* Heading */}

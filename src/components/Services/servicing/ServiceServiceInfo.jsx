@@ -6,8 +6,8 @@ const ServiceServiceInfo = () => {
   const touchStart = () => {};
 
   return (
-    <section className="container mx-auto px-6 sm:px-8 lg:px-12 py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
-      <div className="grid md:grid-cols-2 gap-10">
+    <section className=" px-6 sm:px-8 lg:px-12 py-16 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+      <div className="grid  md:grid-cols-2 gap-10">
         
         {/* What's Included Section */}
         <div

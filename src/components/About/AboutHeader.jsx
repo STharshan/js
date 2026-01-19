@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaPhoneAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const AboutHeader = () => {
   return (
@@ -22,7 +23,7 @@ const AboutHeader = () => {
             {/* Rating and Customer count */}
             <div className="flex items-center space-x-2">
               <span className="text-yellow-400 text-2xl">★★★★★</span>
-              <p className="text-gray-600 dark:text-gray-300">4.9/5 Rating</p>
+              <p className="text-gray-600 dark:text-gray-300">5/5 Rating</p>
               <p className="text-gray-600 dark:text-gray-300 px-3">
                 500+ Happy Customers
               </p>
@@ -30,13 +31,17 @@ const AboutHeader = () => {
 
             {/* Buttons */}
             <div className="flex space-x-6">
-              <button className="bg-teal-500 text-white px-6 py-2 rounded-md hover:bg-teal-600 transition duration-300 flex items-center space-x-2">
+              <a 
+                href='tel: +441709863222 '
+                className="bg-teal-500 text-white px-6 py-2 rounded-md hover:bg-teal-600 transition duration-300 flex items-center space-x-2">
                 <FaPhoneAlt className="w-4 h-4" />
                 <span>Get In Touch</span>
-              </button>
-              <button className="bg-teal-500 text-white px-6 py-2 rounded-md hover:bg-teal-600 transition duration-300">
+              </a>
+              <Link 
+                to="/#service"
+                className="bg-teal-500 text-white px-6 py-2 rounded-md hover:bg-teal-600 transition duration-300">
                 Our Services
-              </button>
+              </Link>
             </div>
           </div>
 

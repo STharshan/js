@@ -46,7 +46,7 @@ const HeroSection = () => {
               <span className="text-orange-500 text-2xl">★★★★★</span>
               <p className="text-gray-600 dark:text-gray-300">5/5 Rating</p>
               <p className="text-gray-600 dark:text-gray-300">
-                33 Happy Customers
+                500+ Happy Customers
               </p>
             </div>
 
@@ -83,10 +83,14 @@ const HeroSection = () => {
                 <FiClock className="w-5 h-5 text-gray-600 dark:text-gray-300" />
                 <div>
                   <p className="font-semibold text-gray-900 dark:text-gray-100">
-                    Open Mon-Fri
+                    Open
                   </p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    8:00 AM - 5:00 PM
+                    Mon-Wed: 8AM-5PM
+                    Thu: 8AM-5:30PM <br />
+                    Fri: 8AM-5PM 
+                    Sat: 8AM-2PM
+                    Sun: Closed
                   </p>
                 </div>
               </div>

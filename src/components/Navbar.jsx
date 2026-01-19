@@ -148,7 +148,7 @@ const Navbar = () => {
             href="tel:+441709863222"
             className="text-gray-700 dark:text-gray-300 hover:text-teal-500 text-sm xl:text-base transition-colors"
           >
-            01709 863222
+            +44 1709 863222
           </a>
           <Link to="/contact">
             <button className="bg-teal-600 text-white px-3 xl:px-4 py-2 rounded-md hover:bg-teal-500 text-sm xl:text-base transition-colors">
@@ -285,7 +285,7 @@ const Navbar = () => {
                 href="tel:+441709863222"
                 className="text-gray-700 dark:text-gray-300 hover:text-teal-500 transition-colors"
               >
-                01709 863222
+                +44 1709 863222
               </a>
             </div>
 

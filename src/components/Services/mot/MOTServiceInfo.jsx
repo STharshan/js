@@ -3,7 +3,7 @@ import { FiCheckCircle } from 'react-icons/fi';
 
 const MotServiceInfo = () => {
   return (
-    <div className="container mx-auto px-6 sm:px-8 lg:px-19 py-10 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <div className=" px-6 sm:px-8 lg:px-19 py-10 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
       <div className="grid md:grid-cols-2 gap-8">
         {/* What's Included Section */}
         <div

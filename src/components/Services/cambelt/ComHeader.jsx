@@ -32,17 +32,18 @@ const ComHeader = () => {
 
             {/* Buttons */}
             <div className="flex space-x-6">
-              <Link
-                to="/contact"
+              <a
+                href="tel: +441709863222"
                 className="bg-teal-500 text-white px-6 py-2 rounded-md hover:bg-teal-600 transition duration-300 flex items-center space-x-2"
               >
                 <FaPhoneAlt className="w-4 h-4" />
-                <span>Book Now - 01709 863222</span>
-              </Link>
-
-              <button className="bg-teal-500 text-white px-6 py-2 rounded-md hover:bg-teal-600 transition duration-300">
+                <span>Book Now +44 1709 863222</span>
+              </a>
+              <Link
+                to="/contact"
+                className="bg-teal-500 text-white px-6 py-2 rounded-md hover:bg-teal-600 transition duration-300">
                 Get Free Quote
-              </button>
+              </Link>
             </div>
           </div>
 

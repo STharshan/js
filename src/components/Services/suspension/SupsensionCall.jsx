@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SupsensionCall = () => {
   return (
@@ -11,17 +12,17 @@ Call us now or get a free quote online. We're here to keep your vehicle running 
       </p>
       <div className="flex justify-center gap-4">
         <a
-          href="tel:01709863222"
+          href="tel:+441709863222"
           className="bg-orange-500 text-white py-2 px-6 rounded-lg text-lg flex items-center gap-2"
         >
-          Call 01709 863222
+          Call +44 1709 863222
         </a>
-        <a
-          href="#"
+        <Link
+          to="/contact"
           className="bg-blue-500 text-white py-2 px-6 rounded-lg text-lg"
         >
           Get Free Quote
-        </a>
+        </Link>
       </div>
     </section>
   );

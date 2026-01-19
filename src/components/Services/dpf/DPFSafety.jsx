@@ -4,7 +4,7 @@ const DPFSafety = () => {
   const touchStart = () => {};
 
   return (
-    <section className="container mx-auto px-6 sm:px-10 lg:px-18 py-16 bg-white dark:bg-[#0B1322] transition-colors duration-300">
+    <section className="  px-6 sm:px-10 lg:px-18 py-16 bg-white dark:bg-[#0B1322] transition-colors duration-300">
       {/* Header */}
       <div className="text-center mb-12">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">

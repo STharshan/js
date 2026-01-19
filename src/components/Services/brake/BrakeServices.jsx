@@ -1,8 +1,9 @@
 import React from "react";
+import { AiOutlineArrowRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
 
 const BrakeServices = () => {
-  const touchStart = () => {};
+  const touchStart = () => { };
 
   const services = [
     { name: "MOT Test", price: "From £35", path: "/services/mot" },
@@ -12,7 +13,7 @@ const BrakeServices = () => {
 
   return (
     <section
-      className="container mx-auto px-6 sm:px-8 lg:px-18 py-16
+      className=" px-6 sm:px-8 lg:px-18 py-16
                  bg-white dark:bg-[#0E1625] transition-colors duration-300"
     >
       {/* Heading */}
@@ -48,12 +49,11 @@ const BrakeServices = () => {
             </p>
             <Link
               to={service.path}
-              className="inline-block w-full text-center 
-                         bg-teal-500 text-white py-3 px-6 rounded-lg 
-                         hover:bg-orange-600 active:bg-orange-700
-                         transition-colors duration-300"
+              className="w-full text-center 
+             bg-teal-500 text-white py-3 px-6 rounded-lg 
+             hover:bg-orange-500 dark:hover:bg-teal-400 transition-colors duration-300 flex items-center justify-center gap-2"
             >
-              Learn More →
+              Learn More <AiOutlineArrowRight size={18} />
             </Link>
           </div>
         ))}

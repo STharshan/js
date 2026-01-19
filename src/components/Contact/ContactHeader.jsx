@@ -30,7 +30,7 @@ const ContactHeader = () => {
               Call Us Now
             </h3>
             <p className="text-teal-600 dark:text-teal-400 text-xl mb-2">
-              01709 863222
+              +44 1709 863222
             </p>
             <p className="text-sm text-gray-600 dark:text-gray-400">
               Mon-Fri: 8AM-6PM
