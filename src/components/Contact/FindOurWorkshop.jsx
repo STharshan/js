@@ -2,7 +2,7 @@ import React from 'react';
 
 const FindOurWorkshop = () => {
   return (
-    <div className="container mx-auto px-6 sm:px-8 lg:px-22 py-12 transition-colors duration-300 bg-white dark:bg-gray-900">
+    <div className="px-6 sm:px-8 lg:px-22 py-12 transition-colors duration-300 bg-white dark:bg-gray-900">
       <h2 className="text-3xl font-semibold text-center mb-8 text-gray-900 dark:text-gray-100">
         Find Our Workshop
       </h2>

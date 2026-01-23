@@ -165,7 +165,7 @@ const QuoteForm = () => {
             </div>
 
             <p className="text-sm text-center text-gray-500 dark:text-gray-400">
-              We’ll respond within 24 hours with a detailed quote.
+              By submitting this form, you agree to us processing your details to respond to your enquiry. Your information is handled securely and in line with our Privacy Policy.
             </p>
           </form>
         </div>
