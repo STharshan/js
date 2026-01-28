@@ -39,7 +39,7 @@ const ServiceSafety = () => {
         "Everything in Full Service",
         "Coolant system service",
         "Air filter replacement",
-        "Spark plug check/replace",
+        "Spark plug & Fuel filter check/replace",
         "Comprehensive diagnostics",
       ],
     },
