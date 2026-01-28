@@ -28,6 +28,7 @@ const ServiceSafety = () => {
         "Suspension inspection",
         "Exhaust system check",
         "Detailed report",
+        "Air pollen filter"
       ],
     },
     {
@@ -36,7 +37,6 @@ const ServiceSafety = () => {
       highlight: false,
       features: [
         "Everything in Full Service",
-        "Timing belt inspection",
         "Coolant system service",
         "Air filter replacement",
         "Spark plug check/replace",
