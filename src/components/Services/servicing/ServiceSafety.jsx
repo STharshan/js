@@ -7,7 +7,7 @@ const ServiceSafety = () => {
   const services = [
     {
       name: "Basic Service",
-      price: "£120",
+      price: "From £100",
       highlight: false,
       features: [
         "Oil and filter change",

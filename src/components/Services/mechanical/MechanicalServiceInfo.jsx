@@ -2,7 +2,6 @@ import React from 'react';
 import { FiCheckCircle } from 'react-icons/fi';
 
 const MechanicalServiceInfo = () => {
-  // iOS Safari hack to trigger :active styles
   const touchStart = () => {};
 
   return (

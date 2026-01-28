@@ -28,7 +28,7 @@ const BrakeHeader = () => {
               <div className="flex items-center space-x-2">
                 <FiClock className="w-5 h-5 text-gray-600 dark:text-gray-400 transition-colors duration-300" />
                 <div className="flex flex-col">
-                  <p className="font-semibold">1-3 hours</p>
+                  <p className="font-semibold">1-2 hours</p>
                 </div>
               </div>
             </div>

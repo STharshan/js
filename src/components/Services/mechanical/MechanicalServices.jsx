@@ -1,12 +1,13 @@
 import React from "react";
+import { FiArrowRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 const MechanicalServices = () => {
   // iOS Safari hack to trigger :active styles
-  const touchStart = () => {};
+  const touchStart = () => { };
 
   const services = [
-    { name: "Diagnostics", price: "From £5", path: "/services/diagnostics" },
+    { name: "Diagnostics", price: "From £45", path: "/services/diagnostics" },
     { name: "Engine Service", price: "From £180", path: "/services/mechanical-repairs" },
     { name: "Brake Repairs", price: "From £80", path: "/services/brake" },
   ];
@@ -39,14 +40,18 @@ const MechanicalServices = () => {
             </p>
             <Link
               to={service.path}
-              onTouchStart={touchStart} // also needed for button press on iOS
-              className="inline-block w-full text-center
-                         bg-teal-500 text-white py-3 px-6 rounded-lg
-                         hover:bg-orange-500 active:bg-orange-600
-                         transition-colors duration-300"
+              onTouchStart={touchStart}
+              className="group inline-block w-full text-center
+             bg-teal-500 text-white py-3 px-6 rounded-lg
+             hover:bg-orange-500 active:bg-orange-600
+             transition-colors duration-300"
             >
-              Learn More →
+              <span className="flex items-center justify-center gap-2">
+                Learn More
+                <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+              </span>
             </Link>
+
           </div>
         ))}
       </div>

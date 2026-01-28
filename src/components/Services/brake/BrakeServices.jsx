@@ -6,7 +6,7 @@ const BrakeServices = () => {
   const touchStart = () => { };
 
   const services = [
-    { name: "MOT Test", price: "From £35", path: "/services/mot" },
+    { name: "MOT Test", price: "From £40", path: "/services/mot" },
     { name: "Suspension", price: "From £120", path: "/services/suspension" },
     { name: "Diagnostics", price: "From £45", path: "/services/diagnostics" },
   ];

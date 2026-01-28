@@ -1,8 +1,9 @@
 import React from "react";
+import { FiArrowRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 
 const DPFServices = () => {
-  const touchStart = () => {};
+  const touchStart = () => { };
 
   const services = [
     {
@@ -17,7 +18,7 @@ const DPFServices = () => {
     },
     {
       name: "MOT Test",
-      price: "From £35",
+      price: "From £40",
       path: "/services/mot",
     },
   ];
@@ -48,13 +49,17 @@ const DPFServices = () => {
             </p>
             <Link
               to={service.path}
-              className="inline-block w-full text-center 
-                         bg-teal-500 text-white py-3 px-6 rounded-lg 
-                         hover:bg-teal-600 active:bg-teal-700
-                         transition-colors duration-300"
+              className="group inline-block w-full text-center 
+             bg-teal-500 text-white py-3 px-6 rounded-lg 
+             hover:bg-teal-600 active:bg-teal-700
+             transition-colors duration-300"
             >
-              Learn More →
+              <span className="flex items-center justify-center gap-2">
+                Learn More
+                <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+              </span>
             </Link>
+
           </div>
         ))}
       </div>

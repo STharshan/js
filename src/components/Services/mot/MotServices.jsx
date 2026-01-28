@@ -1,5 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { FiArrowRight } from "react-icons/fi";
+
+const services = [
+  {
+    title: "MOT Test",
+    price: "From £40",
+    link: "/services/mot",
+  },
+  {
+    title: "Suspension",
+    price: "From £120",
+    link: "/services/suspension",
+  },
+  {
+    title: "Diagnostics",
+    price: "From £45",
+    link: "/services/diagnostics",
+  },
+];
 
 const MotServices = () => {
   return (
@@ -9,80 +28,39 @@ const MotServices = () => {
       </h2>
 
       <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {/* MOT Test */}
-        <div
-          className="
-            bg-white dark:bg-gray-800 
-            p-6 rounded-lg shadow-md border border-gray-200 dark:border-gray-700
-            transition-all duration-300
-            hover:shadow-[0_0_25px_#00BFA5] hover:scale-105
-          "
-        >
-          <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">
-            MOT Test
-          </h3>
-          <p className="text-orange-500 dark:text-orange-400 mb-4">From £35</p>
-          <Link
-            to="/services/mot"
+        {services.map((service, index) => (
+          <div
+            key={index}
             className="
-              block bg-teal-500 text-white py-2 px-4 rounded-lg text-center
-              hover:bg-teal-600 active:bg-teal-700
+              bg-white dark:bg-gray-800
+              p-6 rounded-lg shadow-md border border-gray-200 dark:border-gray-700
               transition-all duration-300
+              hover:shadow-[0_0_25px_#00BFA5] hover:scale-105
             "
           >
-            Learn More →
-          </Link>
-        </div>
+            <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">
+              {service.title}
+            </h3>
 
-        {/* Suspension */}
-        <div
-          className="
-            bg-white dark:bg-gray-800 
-            p-6 rounded-lg shadow-md border border-gray-200 dark:border-gray-700
-            transition-all duration-300
-            hover:shadow-[0_0_25px_#00BFA5] hover:scale-105
-          "
-        >
-          <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">
-            Suspension
-          </h3>
-          <p className="text-orange-500 dark:text-orange-400 mb-4">From £120</p>
-          <Link
-            to="/services/suspension"
-            className="
-              block bg-teal-500 text-white py-2 px-4 rounded-lg text-center
-              hover:bg-teal-600 active:bg-teal-700
-              transition-all duration-300
-            "
-          >
-            Learn More →
-          </Link>
-        </div>
+            <p className="text-orange-500 dark:text-orange-400 mb-4">
+              {service.price}
+            </p>
 
-        {/* Diagnostics */}
-        <div
-          className="
-            bg-white dark:bg-gray-800 
-            p-6 rounded-lg shadow-md border border-gray-200 dark:border-gray-700
-            transition-all duration-300
-            hover:shadow-[0_0_25px_#00BFA5] hover:scale-105
-          "
-        >
-          <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-gray-100">
-            Diagnostics
-          </h3>
-          <p className="text-orange-500 dark:text-orange-400 mb-4">From £45</p>
-          <Link
-            to="/services/diagnostics"
-            className="
-              block bg-teal-500 text-white py-2 px-4 rounded-lg text-center
-              hover:bg-teal-600 active:bg-teal-700
-              transition-all duration-300
-            "
-          >
-            Learn More →
-          </Link>
-        </div>
+            <Link
+              to={service.link}
+              className="
+                group block bg-teal-500 text-white py-2 px-4 rounded-lg text-center
+                hover:bg-teal-600 active:bg-teal-700
+                transition-all duration-300
+              "
+            >
+              <span className="flex items-center justify-center gap-2">
+                Learn More
+                <FiArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+              </span>
+            </Link>
+          </div>
+        ))}
       </div>
     </div>
   );

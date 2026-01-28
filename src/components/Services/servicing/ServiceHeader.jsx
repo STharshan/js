@@ -22,14 +22,14 @@ const ServiceHeader = () => {
                         <div className="text-gray-600 dark:text-gray-300 flex items-center space-x-5">
                             <div className="flex items-center space-x-2">
                                 <div className="flex flex-col">
-                                    <p className="font-semibold">From £120</p>
+                                    <p className="font-semibold">From £100</p>
                                 </div>
                             </div>
 
                             <div className="flex items-center space-x-2">
                                 <FiClock className="w-5 h-5 text-gray-600 dark:text-gray-300" />
                                 <div className="flex flex-col">
-                                    <p className="font-semibold">2-4 hours</p>
+                                    <p className="font-semibold">1-3 hours</p>
                                 </div>
                             </div>
                         </div>

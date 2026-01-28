@@ -9,7 +9,7 @@ const ServiceServices = () => {
   const services = [
     {
       name: "MOT Test",
-      price: "From £35",
+      price: "From £40",
       path: "/services/mot",
     },
     {

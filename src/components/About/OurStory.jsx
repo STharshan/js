@@ -29,14 +29,10 @@ const OurStory = () => {
               </h3>
               <div className="max-w-xl mx-auto">
                 <p className="text-gray-600 dark:text-gray-300">
-                  JS Automotive Services was founded in 2008 with a simple mission: to provide honest, reliable automotive
-                  services that Sheffield residents could trust. What started as a small garage has grown into one of the area's
-                  most respected automotive service centers, but we've never lost sight of our core values.
+                  At JS Automotive Edlington, we pride ourselves on providing high-quality, honest, and affordable vehicle care to our local community. Whether it’s routine servicing, complex mechanical repairs, or advanced diagnostics, our goal is to get you back on the road safely without the main-dealer price tag.
                 </p>
                 <p className="mt-5 text-gray-600 dark:text-gray-300">
-                  Our founder, John Smith, began his automotive career over 20 years ago as an apprentice mechanic. His passion
-                  for cars and commitment to quality workmanship drove him to establish JS Automotive Services, where every
-                  customer is treated like family.
+                  As a family-run business, we understand how much you rely on your vehicle, which is why we treat every car as if it were our own—offering transparent advice, fair quotes, and a commitment to first-class service. From brakes and exhausts to full engine health checks, you can trust JS Automotive to deliver professional results with a personal touch.
                 </p>
               </div>
             </div>
