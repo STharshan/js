@@ -1,27 +1,29 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image" href="/tab.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="color-scheme" content="light dark" />
-  <link rel="icon" type="image" href="/logo.png" />
-  <title>JS</title>
+  <!-- 🌟 Open Graph for WhatsApp / Facebook / Instagram -->
+  <meta property="og:title" content="JS Automotive" />
+  <meta property="og:description" 
+        content="At JS Automotive Edlington, we pride ourselves on providing high-quality, honest, and affordable vehicle care to our local community" />
+  <meta property="og:image" content="/tab.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jsautomotivedoncaster.com/" />
+  <meta property="og:site_name" content="JS Automotive" />
 
-  <!-- Set initial theme before app mounts to avoid flash -->
-  <script>
-    (() => {
-      const stored = localStorage.getItem('theme'); // 'dark' | 'light' | null
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const useDark = stored ? stored === 'dark' : prefersDark;
-      document.documentElement.classList.toggle('dark', useDark);
-    })();
-  </script>
-</head>
-
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
-
+  <!-- 🌟 Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="JS Automotive" />
+  <meta name="twitter:description" 
+        content="At JS Automotive Edlington, we pride ourselves on providing high-quality, honest, and affordable vehicle care to our local community" />
+  <meta name="twitter:image" content="/tab.png" />
+    <title>JS Automotive</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
