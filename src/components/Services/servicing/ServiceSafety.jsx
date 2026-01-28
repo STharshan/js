@@ -28,7 +28,8 @@ const ServiceSafety = () => {
         "Suspension inspection",
         "Exhaust system check",
         "Detailed report",
-        "Air pollen filter"
+        "Air filter",
+        "pollen filter"
       ],
     },
     {
