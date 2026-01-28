@@ -12,28 +12,41 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative bg-white dark:bg-gray-900 py-16 lg:py-24 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative bg-black dark:bg-gray-900 py-16 lg:py-24 transition-colors duration-300">
+      {/* Background video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        src="/bg.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        poster="/fall.png"
+        onError={(e) => (e.currentTarget.style.display = "none")}
+      >
+      </video>
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* ✅ Left side content */}
+          {/* Left side content */}
           <div
             className="space-y-8 text-center lg:text-left"
             data-aos="fade-right"
           >
-            <h1 className="text-4xl lg:text-6xl font-bold mt-10 leading-tight text-gray-900 dark:text-gray-100">
+            <h1 className="text-4xl lg:text-6xl font-bold mt-10 leading-tight text-white">
               Professional{" "}
-              <span className="text-teal-600 dark:text-teal-400">
+              <span className="text-teal-400">
                 Automotive Services
               </span>
             </h1>
 
             <p
-              className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed"
+              className="text-lg sm:text-xl text-gray-200 leading-relaxed"
               data-aos="fade-up"
               data-aos-delay="200"
             >
               Expert car repairs, MOT testing, and maintenance services you can
-              trust. Over 15 years of experience keeping Sheffield's vehicles
+              trust. Over 15 years of experience keeping Doncaster's vehicles
               running smoothly.
             </p>
 
@@ -44,10 +57,8 @@ const HeroSection = () => {
               data-aos-delay="300"
             >
               <span className="text-orange-500 text-2xl">★★★★★</span>
-              <p className="text-gray-600 dark:text-gray-300">5/5 Rating</p>
-              <p className="text-gray-600 dark:text-gray-300">
-                500+ Happy Customers
-              </p>
+              <p className="text-gray-200">5/5 Rating</p>
+              <p className="text-gray-200">500+ Happy Customers</p>
             </div>
 
             {/* Buttons */}
@@ -80,16 +91,14 @@ const HeroSection = () => {
             >
               {/* Clock */}
               <div className="flex items-center gap-2">
-                <FiClock className="w-5 h-5 text-gray-600 dark:text-gray-300" />
+                <FiClock className="w-5 h-5 text-gray-200" />
                 <div>
-                  <p className="font-semibold text-gray-900 dark:text-gray-100">
-                    Open
-                  </p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
-                    Mon-Wed: 8AM-5PM
+                  <p className="font-semibold text-white">Open</p>
+                  <p className="text-sm text-gray-300">
+                    Mon-Wed: 8AM-5PM <br />
                     Thu: 8AM-5:30PM <br />
-                    Fri: 8AM-5PM 
-                    Sat: 8AM-2PM
+                    Fri: 8AM-5PM <br />
+                    Sat: 8AM-2PM <br />
                     Sun: Closed
                   </p>
                 </div>
@@ -97,8 +106,8 @@ const HeroSection = () => {
 
               {/* Location */}
               <div className="flex items-center gap-2">
-                <IoLocationOutline className="w-5 h-5 text-gray-600 dark:text-gray-300" />
-                <div className="text-gray-900 dark:text-gray-200 text-sm sm:text-base">
+                <IoLocationOutline className="w-5 h-5 text-gray-200" />
+                <div className="text-white text-sm sm:text-base">
                   <span>
                     New Edlington,
                     <br />
@@ -109,15 +118,6 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* ✅ Right side image */}
-          <div className="relative" data-aos="zoom-in">
-            <img
-              src="empty.svg"
-              alt="Automotive Service"
-              className="object-cover w-full min-h-[250px] sm:min-h-[350px] rounded-md border border-gray-200 dark:border-gray-700"
-            />
           </div>
         </div>
       </div>

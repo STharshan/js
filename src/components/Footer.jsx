@@ -22,8 +22,7 @@ const Footer = () => {
             </div>
           </div>
           <p className="text-sm max-w-50 mx-auto mb-4 text-gray-600 dark:text-gray-400">
-            Professional automotive services in Sheffield. Over 15 years of
-            experience providing honest, reliable car repairs and maintenance.
+            At JS Automotive Edlington, we pride ourselves on providing high-quality, honest, and affordable vehicle care to our local community
           </p>
           <div className="flex space-x-4 text-teal-700 dark:text-teal-400 text-lg">
             <a
@@ -33,9 +32,6 @@ const Footer = () => {
             >
               <FaFacebookF className="hover:text-blue-700" />
             </a>
-            {/* <a href="#">
-              <FaInstagram className="hover:text-pink-500" />
-            </a> */}
           </div>
         </div>
 
@@ -143,10 +139,7 @@ const Footer = () => {
       {/* Bottom Bar */}
       <div className="border-t border-gray-200 dark:border-gray-700 text-sm text-gray-600 dark:text-gray-400">
         <div className="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
-          <p>
-            © 2025 JS Automotive Services. All rights reserved.<br />
-            Professional automotive services in Sheffield since 2008
-          </p>
+          <p>&copy; {new Date().getFullYear()} JS Automotive Services. All rights reserved.</p>
           <div>
             Powered By{" "}
             <a
@@ -158,7 +151,7 @@ const Footer = () => {
           </div>
           <div className="flex space-x-6 mt-2 md:mt-0">
             <Link to="/privacy" className="hover:text-teal-500">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-teal-500">Terms of Service</Link>
+            <Link to="/terms" className="hover:text-teal-500">Terms & Conditions</Link>
           </div>
         </div>
       </div>

@@ -15,9 +15,7 @@ const AboutHeader = () => {
             </h1>
 
             <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-              For over 15 years, we've been Sheffield's go-to automotive service
-              center, providing honest, professional car repairs and maintenance
-              with a personal touch that larger chains simply can't match.
+              At JS Automotive Edlington, we pride ourselves on providing high-quality, honest, and affordable vehicle care to our local community
             </p>
 
             {/* Rating and Customer count */}
