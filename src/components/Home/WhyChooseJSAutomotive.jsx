@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { FiAward, FiCheckCircle, FiUsers } from 'react-icons/fi';
 import { LuClock4, LuShield, LuWrench } from 'react-icons/lu';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const services = [
   {
@@ -44,9 +42,6 @@ const services = [
 ];
 
 const WhyChooseJSAutomotive = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: false }); // animate every scroll up/down
-  }, []);
 
   return (
     <section className="py-16 bg-gray-100 dark:bg-gray-900 transition-colors duration-300">

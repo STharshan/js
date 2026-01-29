@@ -1,7 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { FaQuoteRight } from "react-icons/fa";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -84,9 +82,7 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: false });
-  }, []);
+
 
   return (
     <section className="py-16 px-4 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">

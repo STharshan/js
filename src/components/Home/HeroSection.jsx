@@ -1,15 +1,10 @@
-import { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { FaPhoneAlt } from "react-icons/fa";
 import { FiClock } from "react-icons/fi";
 import { IoLocationOutline } from "react-icons/io5";
-import AOS from "aos";
-import "aos/dist/aos.css";
 
 const HeroSection = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: true });
-  }, []);
 
   return (
     <section className="relative bg-black dark:bg-gray-900 py-16 lg:py-24 transition-colors duration-300">

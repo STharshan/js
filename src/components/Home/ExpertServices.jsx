@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { AiOutlineDashboard } from 'react-icons/ai';
 import { FaSearch } from 'react-icons/fa';
 import { HiOutlineBolt } from 'react-icons/hi2';
@@ -7,8 +7,6 @@ import { LiaCarSideSolid } from 'react-icons/lia';
 import { LuFilter, LuWrench } from 'react-icons/lu';
 import { SiTarget } from 'react-icons/si';
 import { Link } from 'react-router-dom';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const services = [
   { name: 'MOT Testing', price: 'From £35', description: 'Comprehensive MOT tests with detailed reports and advice on any issues found.', icon: <LiaCarSideSolid size={30} />, path: '/services/mot' },
@@ -22,9 +20,6 @@ const services = [
 ];
 
 const ExpertServices = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: false });
-  }, []);
 
   return (
     <section id='service' className="py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
@@ -70,9 +65,6 @@ const ExpertServices = () => {
               <h3 className="text-xl font-semibold text-gray-800 dark:text-gray-200 mb-2">
                 {service.name}
               </h3>
-              {/* <p className="text-lg font-semibold text-orange-500">
-                {service.price}
-              </p> */}
 
               {/* Description expands to push button down */}
               <p className="text-gray-500 dark:text-gray-400 mb-4 mt-5 flex-grow">
