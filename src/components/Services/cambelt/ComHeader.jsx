@@ -51,6 +51,7 @@ const ComHeader = () => {
           <div className="relative">
             <img
               src="/empty.svg"
+               loading='lazy'
               alt="Automotive Service"
               className="object-cover w-full h-full rounded-md"
             />

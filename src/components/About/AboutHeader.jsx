@@ -46,8 +46,9 @@ const AboutHeader = () => {
           {/* Right side image */}
           <div className="relative">
             <img
-              src="empty.svg"
+              src="js_story.jpeg"
               alt="Automotive Service"
+              loading='lazy'
               className="object-cover w-full h-full rounded-md shadow-md dark:shadow-gray-700"
             />
           </div>

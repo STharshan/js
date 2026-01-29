@@ -58,6 +58,7 @@ const MotHeader = () => {
             <img
               src="/empty.svg"
               alt="Automotive Service"
+               loading='lazy'
               className="object-cover w-full h-full rounded-md"
             />
           </div>

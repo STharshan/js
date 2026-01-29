@@ -54,6 +54,7 @@ const DiagnosticsHeader = () => {
             <img
               src="/empty.svg"
               alt="Automotive Service"
+               loading='lazy'
               className="object-cover w-full h-auto max-h-[500px] rounded-md shadow-lg"
             />
           </div>
