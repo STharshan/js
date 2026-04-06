@@ -1,5 +1,5 @@
 import React from 'react'
-import ComHeader from '../components/Services/cambelt/ComHeader'
+import ComHeader from '../Common/ServiceHeader'
 import ComServiceInfo from '../components/Services/cambelt/ComServiceInfo'
 import ComSafety from '../components/Services/cambelt/ComSafety'
 import ComServices from '../components/Services/cambelt/ComServices'
@@ -8,7 +8,14 @@ import ComCall from '../components/Services/cambelt/ComCall'
 const CamBelt = () => {
   return (
     <div>
-      <ComHeader />
+      <ComHeader 
+      title="Cam Belt Replacement"
+      description="Professional timing belt replacement to prevent catastrophic engine damage. Don't risk expensive engine repairs – replace your timing belt at recommended intervals."
+      price="From £280"
+      duration="3-5 hours"
+      imageSrc="/empty.svg"
+      
+      />
       <ComServiceInfo />
       <ComSafety />
       <ComServices />

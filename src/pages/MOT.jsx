@@ -1,5 +1,5 @@
 import React from 'react'
-import MotHeader from '../components/Services/mot/MotHeader'
+import MotHeader from '../Common/ServiceHeader'
 import MotServiceInfo from '../components/Services/mot/MOTServiceInfo'
 import MotSafety from '../components/Services/mot/MotSafety'
 import MotServices from '../components/Services/mot/MotServices'
@@ -9,7 +9,14 @@ import MOTCall from '../components/Services/mot/MotCall'
 const MOT = () => {
   return (
     <div>
-      <MotHeader />
+      <MotHeader 
+      title="MOT Testing"
+      description="Comprehensive MOT testing with detailed reports and expert advice. We test all aspects of your vehicle's safety, roadworthiness, and environmental impact."
+      price="From £40"
+      duration="40min - 1hour"
+      imageSrc="/empty.svg"
+      
+      />
       <MotServiceInfo />
       <MotSafety />
       <MotServices />
