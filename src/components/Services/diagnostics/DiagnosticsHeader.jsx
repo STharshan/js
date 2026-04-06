@@ -1,11 +1,11 @@
-import React from 'react';
+
 import { FaPhoneAlt } from 'react-icons/fa';
 import { FiClock } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 const DiagnosticsHeader = () => {
   return (
-    <section className="relative bg-white dark:bg-[#0E1625] py-20 lg:py-25 transition-colors duration-300">
+    <section className="relative bg-white dark:bg-[#0E1625] py-20 lg:py-26 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side content */}
@@ -54,7 +54,7 @@ const DiagnosticsHeader = () => {
             <img
               src="/empty.svg"
               alt="Automotive Service"
-               loading='lazy'
+              loading='lazy'
               className="object-cover w-full h-auto max-h-[500px] rounded-md shadow-lg"
             />
           </div>

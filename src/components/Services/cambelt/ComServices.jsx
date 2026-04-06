@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
 
@@ -25,7 +25,7 @@ const ComServices = () => {
   ];
 
   return (
-    <section className="px-6 sm:px-10 lg:px-18 py-16 bg-white dark:bg-[#0B101B] transition-colors duration-300">
+    <section className="px-6 sm:px-10 lg:px-18 py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
       <h2 className="text-3xl font-semibold text-center mb-12 text-gray-900 dark:text-white">
         Related Services
       </h2>

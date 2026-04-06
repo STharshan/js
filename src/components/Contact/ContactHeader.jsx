@@ -1,5 +1,6 @@
-import React from 'react';
+
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { PHONE_NUMBER, EMAIL } from "../../constants";
 
 const ContactHeader = () => {
   return (
@@ -30,10 +31,7 @@ const ContactHeader = () => {
               Call Us Now
             </h3>
             <p className="text-teal-600 dark:text-teal-400 text-xl mb-2">
-              +44 1709 863222
-            </p>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Mon-Fri: 8AM-6PM
+              {PHONE_NUMBER}
             </p>
           </div>
 
@@ -54,7 +52,7 @@ const ContactHeader = () => {
               Email Us
             </h3>
             <p className="text-teal-600 dark:text-teal-400 text-xl mb-2">
-              Js.automotive1@outlook.com
+              {EMAIL}
             </p>
             <p className="text-sm text-gray-600 dark:text-gray-400">
               We'll respond within 24 hours

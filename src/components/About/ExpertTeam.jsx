@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaCogs, FaCheckCircle } from 'react-icons/fa'; // Importing React Icons
 
 const ExpertTeam = () => {

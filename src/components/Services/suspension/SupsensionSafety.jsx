@@ -1,7 +1,7 @@
-import React from 'react';
+
 import { FiAlertTriangle } from 'react-icons/fi';
 
-const SupsensionSafety = () => {
+const SuspensionSafety = () => {
   return (
     <section className="px-6 sm:px-10 lg:px-18 py-16 mx-auto bg-white dark:bg-[#0A101D] transition-colors duration-300">
       {/* Title */}
@@ -102,4 +102,4 @@ const SupsensionSafety = () => {
   );
 };
 
-export default SupsensionSafety;
+export default SuspensionSafety;

@@ -1,4 +1,3 @@
-import React from 'react';
 import { FiAward, FiCheckCircle, FiUsers } from 'react-icons/fi';
 import { LuClock4, LuShield, LuWrench } from 'react-icons/lu';
 

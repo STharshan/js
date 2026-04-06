@@ -1,11 +1,10 @@
-import React from 'react';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { FiClock } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 const ComHeader = () => {
   return (
-    <section className="relative bg-white dark:bg-[#0B1322] py-20 lg:py-25 transition-colors duration-300">
+    <section className="relative bg-white dark:bg-[#0B1322] py-20 lg:py-26 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side content */}
@@ -51,7 +50,7 @@ const ComHeader = () => {
           <div className="relative">
             <img
               src="/empty.svg"
-               loading='lazy'
+              loading='lazy'
               alt="Automotive Service"
               className="object-cover w-full h-full rounded-md"
             />

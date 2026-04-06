@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function GDPRConsent() {
   const [visible, setVisible] = useState(false); // Show consent banner
@@ -46,12 +47,12 @@ export default function GDPRConsent() {
             We use cookies to improve your experience.{" "}
           </p>
           <p className="mb-3">
-            <a
-              href="/privacy"
+            <Link
+              to="/privacy"
               className="underline text-teal-600 hover:text-[#ef5a24] dark:text-teal-600 dark:hover:text-[#007BC2]"
             >
               See our Privacy Policy
-            </a>
+            </Link>
 
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-3">
@@ -86,7 +87,7 @@ export default function GDPRConsent() {
             <img
               src="/revisit.svg" // Use your cookie icon
               alt="Cookie Icon"
-               loading='lazy'
+              loading='lazy'
               className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
             />
           </button>

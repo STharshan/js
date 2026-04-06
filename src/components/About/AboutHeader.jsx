@@ -1,10 +1,10 @@
-import React from 'react';
 import { FaPhoneAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { PHONE_NUMBER_TEL } from "../../constants";
 
 const AboutHeader = () => {
   return (
-    <section className="relative bg-white dark:bg-gray-900 py-20 lg:py-25 transition-colors duration-300">
+    <section className="relative bg-white dark:bg-gray-900 py-20 lg:py-26 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side content */}
@@ -30,7 +30,7 @@ const AboutHeader = () => {
             {/* Buttons */}
             <div className="flex space-x-6">
               <a 
-                href='tel: +441709863222 '
+                href={`tel:${PHONE_NUMBER_TEL}`}
                 className="bg-teal-500 text-white px-6 py-2 rounded-md hover:bg-teal-600 transition duration-300 flex items-center space-x-2">
                 <FaPhoneAlt className="w-4 h-4" />
                 <span>Get In Touch</span>

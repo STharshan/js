@@ -1,4 +1,3 @@
-import React from 'react'
 import HeroSection from '../components/Home/HeroSection'
 import ExpertServices from '../components/Home/ExpertServices'
 import WhyChooseJSAutomotive from '../components/Home/WhyChooseJSAutomotive'

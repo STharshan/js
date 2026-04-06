@@ -1,5 +1,5 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import { PHONE_NUMBER, PHONE_NUMBER_TEL } from "../../constants";
 
 const CallToAction = () => {
   return (
@@ -13,10 +13,10 @@ const CallToAction = () => {
       </p>
       <div className="flex justify-center gap-4">
         <a
-          href="tel:+441709863222"
+         href={`tel:${PHONE_NUMBER_TEL}`}
           className="bg-orange-500 text-white py-2 px-6 rounded-lg text-lg flex items-center gap-2"
         >
-          Call +44 1709 863222
+          Call {PHONE_NUMBER}
         </a>
         <Link
           to="/contact"

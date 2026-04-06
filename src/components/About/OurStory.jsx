@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaCar, FaShieldAlt } from 'react-icons/fa'; // Importing icons from react-icons
 
 const OurStory = () => {

@@ -1,4 +1,4 @@
-import React from 'react';
+import { PHONE_NUMBER, EMAIL } from "../../constants";
 
 const VisitWorkshop = () => {
   return (
@@ -47,9 +47,9 @@ const VisitWorkshop = () => {
                 Contact Information
               </h3>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                Phone: +44 1709 863222
+                Phone: {PHONE_NUMBER}
                 <br />
-                Email: Js.automotive1@outlook.com
+                Email: {EMAIL}
               </p>
             </div>
           </div>

@@ -1,9 +1,9 @@
-import React from 'react';
+
 import { FiCheckCircle } from 'react-icons/fi';
 
 const ComServiceInfo = () => {
   return (
-    <section className="   px-6 sm:px-10 lg:px-18 py-16 bg-white dark:bg-[#0B101B] transition-colors duration-300">
+    <section className="   px-6 sm:px-10 lg:px-18 py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
       <div className="grid md:grid-cols-2 gap-10">
         
         {/* What's Included Section */}

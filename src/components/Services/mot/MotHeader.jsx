@@ -1,11 +1,11 @@
-import React from 'react';
+
 import { FaPhoneAlt } from 'react-icons/fa';
 import { FiClock } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 const MotHeader = () => {
   return (
-    <section className="relative bg-white dark:bg-gray-900 py-20 lg:py-25 transition-colors duration-300">
+    <section className="relative bg-white dark:bg-gray-900 py-20 lg:py-26 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side content */}
@@ -45,7 +45,7 @@ const MotHeader = () => {
                 <FaPhoneAlt className="w-4 h-4" />
                 <span>Book Now +44 1709 863222</span>
               </a>
-              <Link 
+              <Link
                 to="/contact"
                 className="bg-teal-500 text-white px-6 py-2 rounded-md hover:bg-teal-600 transition duration-300">
                 Get Free Quote
@@ -58,7 +58,7 @@ const MotHeader = () => {
             <img
               src="/empty.svg"
               alt="Automotive Service"
-               loading='lazy'
+              loading='lazy'
               className="object-cover w-full h-full rounded-md"
             />
           </div>

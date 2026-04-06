@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const SupsensionCall = () => {
+const SuspensionCall = () => {
   return (
     <section className="bg-teal-500 py-16 px-4 text-center">
       <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4">
@@ -28,4 +28,4 @@ Call us now or get a free quote online. We're here to keep your vehicle running 
   );
 };
 
-export default SupsensionCall;
+export default SuspensionCall;

@@ -1,4 +1,4 @@
-import React from 'react';
+
 
 const ServiceSafety = () => {
   // iOS Safari hack to trigger :active styles

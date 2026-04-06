@@ -1,4 +1,3 @@
-import React from 'react';
 import { AiOutlineDashboard } from 'react-icons/ai';
 import { FaSearch } from 'react-icons/fa';
 import { HiOutlineBolt } from 'react-icons/hi2';
@@ -85,7 +84,7 @@ const ExpertServices = () => {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-15" data-aos="zoom-in">
+        <div className="text-center mt-14" data-aos="zoom-in">
           <Link
             to="/contact"
             className="bg-teal-600 text-white px-6 py-2 rounded-md hover:bg-teal-500 transition duration-300"

@@ -1,4 +1,3 @@
-import React from "react";
 import { FaQuoteRight } from "react-icons/fa";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -189,14 +188,6 @@ const Testimonials = () => {
           </span>
         </div>
       </div>
-
-      {/* Swiper arrow color */}
-      <style jsx global>{`
-        .swiper-button-next,
-        .swiper-button-prev {
-          color: #000 !important;
-        }
-      `}</style>
     </section>
   );
 };

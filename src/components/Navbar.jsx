@@ -2,23 +2,14 @@ import React, { useState, useEffect, useRef } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
+import { PHONE_NUMBER, PHONE_NUMBER_TEL } from "../constants";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
 
   const desktopWrapRef = useRef(null);
   const mobileWrapRef = useRef(null);
-
-  // Load saved theme
-  useEffect(() => {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-      document.documentElement.classList.add("dark");
-      setDarkMode(true);
-    }
-  }, []);
 
 
   // Close Services on outside click
@@ -145,10 +136,10 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center space-x-3 xl:space-x-4 justify-self-end">
           <FaPhoneAlt className="w-4 h-4 text-gray-700 dark:text-gray-300" />
           <a
-            href="tel:+441709863222"
+             href={`tel:${PHONE_NUMBER_TEL}`}
             className="text-gray-700 dark:text-gray-300 hover:text-teal-500 text-sm xl:text-base transition-colors"
           >
-            +44 1709 863222
+            {PHONE_NUMBER}
           </a>
           <Link to="/contact">
             <button className="bg-teal-600 text-white px-3 xl:px-4 py-2 rounded-md hover:bg-teal-500 text-sm xl:text-base transition-colors">

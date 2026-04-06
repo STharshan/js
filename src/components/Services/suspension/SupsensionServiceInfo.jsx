@@ -1,7 +1,7 @@
-import React from 'react';
+
 import { FiCheckCircle } from 'react-icons/fi';
 
-const SupsensionServiceInfo = () => {
+const SuspensionServiceInfo = () => {
   return (
     <section className="   px-6 sm:px-10 lg:px-18 py-16 bg-white dark:bg-[#0A101D] transition-colors duration-300">
       <div className="grid md:grid-cols-2 gap-10">
@@ -64,4 +64,4 @@ const SupsensionServiceInfo = () => {
   );
 };
 
-export default SupsensionServiceInfo;
+export default SuspensionServiceInfo;

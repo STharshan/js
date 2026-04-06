@@ -2,6 +2,7 @@ import React from "react";
 import { FaFacebookF } from "react-icons/fa";
 import { FiPhone, FiMail, FiMapPin, FiClock } from "react-icons/fi";
 import { Link } from "react-router-dom";
+import { PHONE_NUMBER, PHONE_NUMBER_TEL, EMAIL } from "../constants";
 
 const Footer = () => {
   return (
@@ -94,19 +95,19 @@ const Footer = () => {
           <ul className="space-y-3 text-sm">
             <li className="flex items-start">
               <FiPhone className="mt-1 mr-2 text-teal-700 dark:text-teal-400" />
-              <a href="tel:+441709863222" className="hover:text-teal-500">
-                +44 1709 863222<br />
+              <a href={`tel:${PHONE_NUMBER_TEL}`} className="hover:text-teal-500">
+                {PHONE_NUMBER}<br />
               </a>
             </li>
             <li className="flex items-start">
               <FiMail className="mt-1 mr-2 text-teal-700 dark:text-teal-400" />
               <a
-                href="mailto:Js.automotive1@outlook.com"
+                href={`mailto:${EMAIL}`}
                 className="hover:text-teal-500"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Js.automotive1@outlook.com
+                {EMAIL}
               </a>
             </li>
             <li className="flex items-start">
