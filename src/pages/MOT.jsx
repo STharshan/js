@@ -3,7 +3,7 @@ import MotHeader from '../Common/ServiceHeader'
 import MotServiceInfo from '../components/Services/mot/MOTServiceInfo'
 import MotSafety from '../components/Services/mot/MotSafety'
 import MotServices from '../components/Services/mot/MotServices'
-import MOTCall from '../components/Services/mot/MotCall'
+import MOTCall from '../Common/CommonCall'
 
 
 const MOT = () => {
@@ -20,7 +20,7 @@ const MOT = () => {
       <MotServiceInfo />
       <MotSafety />
       <MotServices />
-      <MOTCall />
+      <MOTCall title="Ready to Book Your MOT Testing?" />
     </div>
   )
 }

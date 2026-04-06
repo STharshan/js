@@ -3,7 +3,7 @@ import BrakeHeader from  '../Common/ServiceHeader'
 import BrakeServiceInfo from '../components/Services/brake/BrakeServiceInfo'
 import BrakeSafety from '../components/Services/brake/BrakeSafety'
 import BrakeServices from '../components/Services/brake/BrakeServices'
-import BrakeCall from '../components/Services/brake/BrakeCall'
+import BrakeCall from '../Common/CommonCall'
 
 const Brake = () => {
   return (
@@ -19,7 +19,7 @@ const Brake = () => {
       <BrakeServiceInfo />
       <BrakeSafety />
       <BrakeServices />
-      <BrakeCall />
+      <BrakeCall  title="Ready to Book Your Brake Services?"/>
     </div>
   )
 }

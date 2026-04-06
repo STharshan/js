@@ -3,7 +3,7 @@ import ComHeader from '../Common/ServiceHeader'
 import ComServiceInfo from '../components/Services/cambelt/ComServiceInfo'
 import ComSafety from '../components/Services/cambelt/ComSafety'
 import ComServices from '../components/Services/cambelt/ComServices'
-import ComCall from '../components/Services/cambelt/ComCall'
+import ComCall from '../Common/CommonCall'
 
 const CamBelt = () => {
   return (
@@ -19,7 +19,7 @@ const CamBelt = () => {
       <ComServiceInfo />
       <ComSafety />
       <ComServices />
-      <ComCall />
+      <ComCall title="Ready to Book Your Cam Belt Replacement?"/>
     </div>
   )
 }

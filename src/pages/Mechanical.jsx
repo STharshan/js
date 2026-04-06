@@ -2,7 +2,7 @@ import React from 'react'
 import MechanicalHeader from '../Common/ServiceHeader'
 import MechanicalServiceInfo from '../components/Services/mechanical/MechanicalServiceInfo'
 import MechanicalSafety from '../components/Services/mechanical/MechanicalSafety'
-import MechanicalCall from '../components/Services/mechanical/MechanicalCall'
+import MechanicalCall from '../Common/CommonCall'
 import MechanicalServices from '../components/Services/mechanical/MechanicalServices'
 
 const Mechanical = () => {
@@ -19,7 +19,7 @@ const Mechanical = () => {
       <MechanicalServiceInfo />
       <MechanicalSafety />
       <MechanicalServices />
-      <MechanicalCall />
+      <MechanicalCall  title="Ready to Book Your Mechanical Repairs?"/>
     </div>
   )
 }

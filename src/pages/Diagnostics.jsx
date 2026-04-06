@@ -3,7 +3,7 @@ import DiagnosticsHeader from '../Common/ServiceHeader'
 import DiagnosticsServiceInfo from '../components/Services/diagnostics/DiagnosticsServiceInfo'
 import DiagnosticsSafety from '../components/Services/diagnostics/DiagnosticsSafety'
 import DiagnosticsServices from '../components/Services/diagnostics/DiagnosticsServices'
-import DiagnosticsCall from '../components/Services/diagnostics/DiagnosticsCall'
+import DiagnosticsCall from '../Common/CommonCall'
 
 const Diagnostics = () => {
   return (
@@ -19,7 +19,7 @@ const Diagnostics = () => {
       <DiagnosticsServiceInfo />
       <DiagnosticsSafety />
       <DiagnosticsServices />
-      <DiagnosticsCall />
+      <DiagnosticsCall  title="Ready to Book Your Vehicle Diagnostics?"/>
     </div>
   )
 }

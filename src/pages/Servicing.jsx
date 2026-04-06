@@ -3,7 +3,7 @@ import ServiceHeader from '../Common/ServiceHeader'
 import ServiceServiceInfo from '../components/Services/servicing/ServiceServiceInfo'
 import ServiceSafety from '../components/Services/servicing/ServiceSafety'
 import ServiceServices from '../components/Services/servicing/ServiceServices'
-import ServiceCall from '../components/Services/servicing/ServiceCall'
+import ServiceCall from '../Common/CommonCall'
 
 const Servicing = () => {
   return (
@@ -19,7 +19,7 @@ const Servicing = () => {
       <ServiceServiceInfo />
       <ServiceSafety />
       <ServiceServices />
-      <ServiceCall />
+      <ServiceCall  title="Ready to Book Your Vehicle Servicing?"/>
     </div>
   )
 }
