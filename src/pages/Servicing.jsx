@@ -1,10 +1,11 @@
 import React from 'react'
 import ServiceHeader from '../Common/ServiceHeader'
-import ServiceServiceInfo from '../components/Services/servicing/ServiceServiceInfo'
+import ServiceServiceInfo from '../Common/ServiceDetails'
 import ServiceSafety from '../components/Services/servicing/ServiceSafety'
 import ServiceServices from '../Common/RelatedServices'
 import ServiceCall from '../Common/CommonCall'
 import { ServicingRelated } from '../Data/RelatedServices'
+import { ServicingDetails} from "../Data/ServiceDetails"
 const Servicing = () => {
   return (
     <div>
@@ -16,7 +17,10 @@ const Servicing = () => {
       imageSrc="/empty.svg"
       
       />
-      <ServiceServiceInfo />
+      <ServiceServiceInfo 
+       includedItems={ServicingDetails.included} 
+        whyChooseItems={ServicingDetails.whyChoose}
+      />
       <ServiceSafety />
       <ServiceServices  services={ServicingRelated} />
       <ServiceCall  title="Ready to Book Your Vehicle Servicing?"/>

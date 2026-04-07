@@ -1,11 +1,11 @@
 import React from 'react'
 import MotHeader from '../Common/ServiceHeader'
-import MotServiceInfo from '../components/Services/mot/MOTServiceInfo'
+import MotServiceInfo from '../Common/ServiceDetails'
 import MotSafety from '../components/Services/mot/MotSafety'
 import MotServices from '../Common/RelatedServices'
 import MOTCall from '../Common/CommonCall'
 import { MotRelated } from '../Data/RelatedServices';
-
+import { MotDetails} from '../Data/ServiceDetails'
 const MOT = () => {
   return (
     <div>
@@ -17,7 +17,10 @@ const MOT = () => {
       imageSrc="/empty.svg"
       
       />
-      <MotServiceInfo />
+      <MotServiceInfo 
+       includedItems={MotDetails.included} 
+       whyChooseItems={MotDetails.whyChoose}
+      />
       <MotSafety />
       <MotServices  services={MotRelated} />
       <MOTCall title="Ready to Book Your MOT Testing?" />

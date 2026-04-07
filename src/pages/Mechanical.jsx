@@ -1,10 +1,11 @@
 import React from 'react'
 import MechanicalHeader from '../Common/ServiceHeader'
-import MechanicalServiceInfo from '../components/Services/mechanical/MechanicalServiceInfo'
+import MechanicalServiceInfo from '../Common/ServiceDetails'
 import MechanicalSafety from '../components/Services/mechanical/MechanicalSafety'
 import MechanicalCall from '../Common/CommonCall'
 import MechanicalServices from '../Common/RelatedServices'
 import { MechanicalRelated } from '../Data/RelatedServices'
+import { MechanicalDetails} from "../Data/ServiceDetails"
 const Mechanical = () => {
   return (
     <div>
@@ -16,7 +17,10 @@ const Mechanical = () => {
       imageSrc="/empty.svg"
       
       />
-      <MechanicalServiceInfo />
+      <MechanicalServiceInfo 
+       includedItems={MechanicalDetails.included} 
+       whyChooseItems={MechanicalDetails.whyChoose}
+      />
       <MechanicalSafety />
       <MechanicalServices  services={MechanicalRelated} />
       <MechanicalCall  title="Ready to Book Your Mechanical Repairs?"/>

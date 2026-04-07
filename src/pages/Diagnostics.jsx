@@ -1,10 +1,11 @@
 import React from 'react'
 import DiagnosticsHeader from '../Common/ServiceHeader'
-import DiagnosticsServiceInfo from '../components/Services/diagnostics/DiagnosticsServiceInfo'
+import DiagnosticsServiceInfo from '../Common/ServiceDetails'
 import DiagnosticsSafety from '../components/Services/diagnostics/DiagnosticsSafety'
 import DiagnosticsServices from '../Common/RelatedServices'
 import DiagnosticsCall from '../Common/CommonCall'
 import { DiagnosticsRelated } from '../Data/RelatedServices'
+import {DiagnosticsDetails} from "../Data/ServiceDetails"
 const Diagnostics = () => {
   return (
     <div>
@@ -16,7 +17,11 @@ const Diagnostics = () => {
       imageSrc="/empty.svg"
       
       />
-      <DiagnosticsServiceInfo />
+      <DiagnosticsServiceInfo 
+      includedItems={DiagnosticsDetails.included} 
+      whyChooseItems={DiagnosticsDetails.whyChoose}
+      
+      />
       <DiagnosticsSafety />
       <DiagnosticsServices  services={DiagnosticsRelated} />
       <DiagnosticsCall  title="Ready to Book Your Vehicle Diagnostics?"/>

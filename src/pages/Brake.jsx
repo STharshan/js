@@ -1,10 +1,11 @@
 import React from 'react'
 import BrakeHeader from  '../Common/ServiceHeader'
-import BrakeServiceInfo from '../components/Services/brake/BrakeServiceInfo'
+import BrakeServiceInfo from '../Common/ServiceDetails'
 import BrakeSafety from '../components/Services/brake/BrakeSafety'
 import BrakeServices from '../Common/RelatedServices'
 import BrakeCall from '../Common/CommonCall'
 import { BrakeRelated } from '../Data/RelatedServices'
+import {BrakeDetails} from '../Data/ServiceDetails'
 const Brake = () => {
   return (
     <div>
@@ -16,7 +17,9 @@ const Brake = () => {
       imageSrc="/empty.svg"
       
       />
-      <BrakeServiceInfo />
+      <BrakeServiceInfo  
+      includedItems={BrakeDetails.included} 
+      whyChooseItems={BrakeDetails.whyChoose}/>
       <BrakeSafety />
       <BrakeServices  services={BrakeRelated} />
       <BrakeCall  title="Ready to Book Your Brake Services?"/>

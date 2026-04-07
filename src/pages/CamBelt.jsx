@@ -1,10 +1,11 @@
 import React from 'react'
 import ComHeader from '../Common/ServiceHeader'
-import ComServiceInfo from '../components/Services/cambelt/ComServiceInfo'
+import ComServiceInfo from '../Common/ServiceDetails'
 import ComSafety from '../components/Services/cambelt/ComSafety'
 import ComServices from '../Common/RelatedServices'
 import ComCall from '../Common/CommonCall'
 import { CambeltRelated } from '../Data/RelatedServices'
+import {CamBeltDetails} from "../Data/ServiceDetails"
 const CamBelt = () => {
   return (
     <div>
@@ -16,7 +17,10 @@ const CamBelt = () => {
       imageSrc="/empty.svg"
       
       />
-      <ComServiceInfo />
+      <ComServiceInfo 
+      includedItems={CamBeltDetails.included} 
+       whyChooseItems={CamBeltDetails.whyChoose}
+      />
       <ComSafety />
       <ComServices  services={CambeltRelated} />
       <ComCall title="Ready to Book Your Cam Belt Replacement?"/>
