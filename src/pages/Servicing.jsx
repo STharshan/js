@@ -2,9 +2,9 @@ import React from 'react'
 import ServiceHeader from '../Common/ServiceHeader'
 import ServiceServiceInfo from '../components/Services/servicing/ServiceServiceInfo'
 import ServiceSafety from '../components/Services/servicing/ServiceSafety'
-import ServiceServices from '../components/Services/servicing/ServiceServices'
+import ServiceServices from '../Common/RelatedServices'
 import ServiceCall from '../Common/CommonCall'
-
+import { ServicingRelated } from '../Data/RelatedServices'
 const Servicing = () => {
   return (
     <div>
@@ -18,7 +18,7 @@ const Servicing = () => {
       />
       <ServiceServiceInfo />
       <ServiceSafety />
-      <ServiceServices />
+      <ServiceServices  services={ServicingRelated} />
       <ServiceCall  title="Ready to Book Your Vehicle Servicing?"/>
     </div>
   )

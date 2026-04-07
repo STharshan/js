@@ -2,9 +2,9 @@ import React from 'react'
 import DiagnosticsHeader from '../Common/ServiceHeader'
 import DiagnosticsServiceInfo from '../components/Services/diagnostics/DiagnosticsServiceInfo'
 import DiagnosticsSafety from '../components/Services/diagnostics/DiagnosticsSafety'
-import DiagnosticsServices from '../components/Services/diagnostics/DiagnosticsServices'
+import DiagnosticsServices from '../Common/RelatedServices'
 import DiagnosticsCall from '../Common/CommonCall'
-
+import { DiagnosticsRelated } from '../Data/RelatedServices'
 const Diagnostics = () => {
   return (
     <div>
@@ -18,7 +18,7 @@ const Diagnostics = () => {
       />
       <DiagnosticsServiceInfo />
       <DiagnosticsSafety />
-      <DiagnosticsServices />
+      <DiagnosticsServices  services={DiagnosticsRelated} />
       <DiagnosticsCall  title="Ready to Book Your Vehicle Diagnostics?"/>
     </div>
   )

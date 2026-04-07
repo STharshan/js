@@ -2,9 +2,9 @@ import React from 'react'
 import BrakeHeader from  '../Common/ServiceHeader'
 import BrakeServiceInfo from '../components/Services/brake/BrakeServiceInfo'
 import BrakeSafety from '../components/Services/brake/BrakeSafety'
-import BrakeServices from '../components/Services/brake/BrakeServices'
+import BrakeServices from '../Common/RelatedServices'
 import BrakeCall from '../Common/CommonCall'
-
+import { BrakeRelated } from '../Data/RelatedServices'
 const Brake = () => {
   return (
     <div>
@@ -18,7 +18,7 @@ const Brake = () => {
       />
       <BrakeServiceInfo />
       <BrakeSafety />
-      <BrakeServices />
+      <BrakeServices  services={BrakeRelated} />
       <BrakeCall  title="Ready to Book Your Brake Services?"/>
     </div>
   )

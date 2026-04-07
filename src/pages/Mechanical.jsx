@@ -3,8 +3,8 @@ import MechanicalHeader from '../Common/ServiceHeader'
 import MechanicalServiceInfo from '../components/Services/mechanical/MechanicalServiceInfo'
 import MechanicalSafety from '../components/Services/mechanical/MechanicalSafety'
 import MechanicalCall from '../Common/CommonCall'
-import MechanicalServices from '../components/Services/mechanical/MechanicalServices'
-
+import MechanicalServices from '../Common/RelatedServices'
+import { MechanicalRelated } from '../Data/RelatedServices'
 const Mechanical = () => {
   return (
     <div>
@@ -18,7 +18,7 @@ const Mechanical = () => {
       />
       <MechanicalServiceInfo />
       <MechanicalSafety />
-      <MechanicalServices />
+      <MechanicalServices  services={MechanicalRelated} />
       <MechanicalCall  title="Ready to Book Your Mechanical Repairs?"/>
     </div>
   )

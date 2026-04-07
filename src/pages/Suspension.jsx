@@ -2,10 +2,10 @@ import React from 'react'
 import SuspensionHeader from '../Common/ServiceHeader'
 import SuspensionServiceInfo from '../components/Services/suspension/SupsensionServiceInfo'
 import SuspensionSafety from '../components/Services/suspension/SupsensionSafety'
-import SuspensionServices from '../components/Services/suspension/SupsensionServices'
+import SuspensionServices from '../Common/RelatedServices'
 import SuspensionCall from '../Common/CommonCall'
 
-
+import { SuspensionRelated } from '../Data/RelatedServices'
 const Suspension = () => {
   return (
     <div>
@@ -19,7 +19,7 @@ const Suspension = () => {
       />
       <SuspensionServiceInfo />
       <SuspensionSafety />
-      <SuspensionServices />
+      <SuspensionServices  services={SuspensionRelated} />
       <SuspensionCall  title="Ready to Book Your Suspension Services?"/>
     </div>
   )

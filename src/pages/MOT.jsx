@@ -2,9 +2,9 @@ import React from 'react'
 import MotHeader from '../Common/ServiceHeader'
 import MotServiceInfo from '../components/Services/mot/MOTServiceInfo'
 import MotSafety from '../components/Services/mot/MotSafety'
-import MotServices from '../components/Services/mot/MotServices'
+import MotServices from '../Common/RelatedServices'
 import MOTCall from '../Common/CommonCall'
-
+import { MotRelated } from '../Data/RelatedServices';
 
 const MOT = () => {
   return (
@@ -19,7 +19,7 @@ const MOT = () => {
       />
       <MotServiceInfo />
       <MotSafety />
-      <MotServices />
+      <MotServices  services={MotRelated} />
       <MOTCall title="Ready to Book Your MOT Testing?" />
     </div>
   )
