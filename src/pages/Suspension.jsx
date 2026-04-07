@@ -1,11 +1,11 @@
 import React from 'react'
 import SuspensionHeader from '../Common/ServiceHeader'
-import SuspensionServiceInfo from '../components/Services/suspension/SupsensionServiceInfo'
+import SuspensionServiceInfo from '../Common/ServiceDetails'
 import SuspensionSafety from '../components/Services/suspension/SupsensionSafety'
-import SuspensionServices from '../components/Services/suspension/SupsensionServices'
+import SuspensionServices from '../Common/RelatedServices'
 import SuspensionCall from '../Common/CommonCall'
-
-
+import {SuspensionDetails} from "../Data/ServiceDetails"
+import { SuspensionRelated } from '../Data/RelatedServices'
 const Suspension = () => {
   return (
     <div>
@@ -17,9 +17,12 @@ const Suspension = () => {
       imageSrc="/empty.svg"
       
       />
-      <SuspensionServiceInfo />
+      <SuspensionServiceInfo 
+       includedItems={SuspensionDetails.included} 
+       whyChooseItems={SuspensionDetails.whyChoose}
+      />
       <SuspensionSafety />
-      <SuspensionServices />
+      <SuspensionServices  services={SuspensionRelated} />
       <SuspensionCall  title="Ready to Book Your Suspension Services?"/>
     </div>
   )

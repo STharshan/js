@@ -1,10 +1,11 @@
 import React from 'react'
 import DPFHeader from '../Common/ServiceHeader'
-import DPFServiceInfo from '../components/Services/dpf/DPFServiceInfo'
+import DPFServiceInfo from '../Common/ServiceDetails'
 import DPFSafety from '../components/Services/dpf/DPFSafety'
-import DPFServices from '../components/Services/dpf/DPFServices'
+import DPFServices from '../Common/RelatedServices'
 import DPFCall from '../Common/CommonCall'
-
+import { DPFRelated } from '../Data/RelatedServices'
+import  {DpfDetails} from "../Data/ServiceDetails"
 const DPF = () => {
   return (
     <div>
@@ -16,9 +17,12 @@ const DPF = () => {
       imageSrc="/empty.svg"
       
       />
-      <DPFServiceInfo />
+      <DPFServiceInfo 
+       includedItems={DpfDetails.included} 
+       whyChooseItems={DpfDetails.whyChoose}
+      />
       <DPFSafety />
-      <DPFServices />
+      <DPFServices  services={DPFRelated} />
       <DPFCall  title="Ready to Book Your DPF Cleaning?"/>
     </div>
   )
